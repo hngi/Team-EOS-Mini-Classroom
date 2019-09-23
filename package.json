@@ -1,7 +1,7 @@
 {
-  "name": "EmexClassroomApp",
+  "name": "TeamEOSClassroomApp",
   "version": "1.0.0",
-  "description": "Emex Classroom App",
+  "description": "Team EOS Classroom App",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
