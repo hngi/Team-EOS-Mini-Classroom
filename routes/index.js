@@ -19,7 +19,7 @@ router.get("/register", function(req, res){
 // handle signup logic 
 // here the user gets created and then the user is logged in with passport.authticate(a passport-local-mongoose object)
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username, position: req.body.position});
+    var newUser = new User({fullname: req.body.firstname+' '+req.body.lastname,username: req.body.username, position: req.body.position});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);

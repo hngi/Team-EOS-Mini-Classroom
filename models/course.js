@@ -4,13 +4,16 @@ var courseSchema = new mongoose.Schema({
     name: String,
     price: String,
     image: String,
-    description: String, 
-    author: {
+    description: String,
+    material: String,
+    dateCreated: { type: Date, default: Date.now }, 
+    author: { 
         id: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
         }, 
-        username: String
+        username: String,
+        fullname: String
     },
     comments: [
         {

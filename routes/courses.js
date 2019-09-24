@@ -24,11 +24,13 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     var price = req.body.price;
     var image = req.body.image;
     var desc  = req.body.description;
+    var material  = req.body.material;
     var author = {
         id: req.user._id,
-        username: req.user.username
+        username: req.user.username,
+        fullname: req.user.fullname
     }
-    var newCourse = {name: name, price: price, image: image, description: desc, author: author};
+    var newCourse = {name: name, price: price, image: image, description: desc, material : material ,author: author};
     // create new Course and save to db
     Course.create(newCourse, function(err, newlyCreated){
         if (err){
