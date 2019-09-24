@@ -1,5 +1,5 @@
 
-[![Build Status]]
+[![Build Status](https://travis-ci.org/Emex4gman/Team-EOS-Mini-Classroom.svg?branch=master)](https://travis-ci.org/Emex4gman/Team-EOS-Mini-Classroom)
 
 <div align="center">
 
