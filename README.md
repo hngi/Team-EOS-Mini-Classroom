@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![EOS](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
+![EOS](https://res.cloudinary.com/ibefx/image/upload/v1569326155/eso2_ojj7hj.png)
 
 <br>
 
