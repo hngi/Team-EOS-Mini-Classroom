@@ -5,7 +5,9 @@
                 <h1>Welcome To CLASSROOM!!</h1>
                 <p>View all  the Courses</p>
                 <p>       
+                        <% if(currentUser && currentUser.position==="teacher"){ %>
                     <a class="btn btn-primary btn-large " href="/courses/new">New Course</a>
+                    <% } %>
                 </p>
             </div>
         </header> 
