@@ -57,14 +57,19 @@ git checkout staging
 ```
 
 The template for your profile page can be found here
-`views/interns/template.php`
+`Contribution.json`
 
 - Copy the contents of that file
-- Create a new file with your slack username, e.g `mark.php`
+- Create a new line with this markup and with your slack username like so, e.g
+`
+"slack username":{
+        "fullname": "ibebgugwu chukwuemeka",
+        "stack": "Backend",
+        "skills": "JavaScript, Nodejs"
+    },
+    `
+    
 - Paste the contents there
-- Now your page should be assesible via `localhost:8000/interns/mark`
-  ![hng profile](https://res.cloudinary.com/iambeejayayo/image/upload/v1554302765/download.png)
-- Edit the contents of the file to your profile details
 - Push to `staging` branch and open a pull request
 - Wait for review
 
