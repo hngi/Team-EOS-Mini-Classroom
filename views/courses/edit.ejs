@@ -1,28 +1,93 @@
-<% include ../partials/header %>
-<div class="container">
-    <div class="row">
-        <h1 style="text-align: center;">Edit <%= course.name %></h1>
-        <div class="form" style="width: 30%; margin: 25px auto;">
-            <form   action="/courses/<%= course._id %>?_method=PUT" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="course[name]" value="<%= course.name %>">                
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="number" name="course[price]" value="<%= course.price %>" min="0.01" step="0.01">                
-                </div>
-                <div class="form-group"> 
-                    <input class="form-control" type="text" name="course[image]" value="<%= course.image %>">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="course[description]" value="<%= course.description %>">                
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Update</button>
-                </div>
-            </form>
-            <a href="/courses">Back to courses</a>
-        </div>    
-    </div>    
-</div>
 
-<% include ../partials/footer %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathisi</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/createClass.css">
+    <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/svg"
+        sizes="16x16">
+</head>
+
+<body>
+    <div class="background">
+
+    </div>
+    <header class="main-header">
+        <div class="brand-container">
+            <a class="brand-link" href="/courses"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
+                    alt="Logo"></a>
+        </div>
+
+        <nav class="main-nav">
+
+            <ul class="main-nav__items">
+
+                <% if(!currentUser){ %>
+                <li class="main-nav__item"><a href="/login">Login</a></li>
+                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <% } else{ %>
+                <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
+                <li class="main-nav__item"><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+            <!-- <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/"><img src="/appdesigns/Logo.svg" class="logo" alt="Logo"
+                        width="15%"></a>
+            </div> -->
+
+
+        </nav>
+    </header>
+
+    <div class="">
+        <% if(error && error.length>0){ %>
+        <div class=" alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+        <% if(success && success.length>0){ %>
+        <div class=" alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>
+
+
+    <div class="content">
+        <div class="content-field">
+            <h2>Edit <%= course.name %></h2>
+            <form class="cc-form" action="/courses/<%= course._id %>?_method=PUT" method="POST">
+                <input class="" type="text" name="course[name]" value="<%= course.name %>" placeholder=" Course name"
+                    required><br>
+
+                <input class="" type="text" name="course[material]" value="<%= course.material %>"
+                    placeholder="Course material url" required><br>
+
+                <input class="" type="text" name="course[description]" value="<%= course.description %>"
+                    placeholder="description" required><br>
+
+                <button class="create" class="">Submit</button>
+            </form>
+             <a href="/courses">Back to courses</a>
+        </div>
+        <div class="content-img">
+            <img src="/images/undraw_teaching_f1cm.svg" width="60%">
+        </div>
+    </div>
+    <br>
+
+
+    <% include ../partials/footer %>

@@ -27,7 +27,7 @@ router.post("/register", function(req, res){
             return res.render("register", {error: err.message})
         }
         passport.authenticate("local")(req, res, function(){
-            req.flash("success", "Welcome to Yelpcamp " + user.username);
+            req.flash("success", "Welcome to Mathisi " + user.username);
             res.redirect("/courses");
         });
     });
@@ -54,4 +54,13 @@ router.get("/logout", function(req, res){
     res.redirect("/courses");
 });
 
+//about routtrs
+router.get("/about", (req, res) => {
+    res.render("about")
+});
+
+//getstarted routes
+router.get("/getstarted", (req, res) => {
+    res.render("getstarted")
+});
 module.exports = router;

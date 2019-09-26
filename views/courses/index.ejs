@@ -1,38 +1,99 @@
-<% include ../partials/header %>
+<!DOCTYPE html>
+<html>
 
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">    
-                <h1>Welcome To CLASSROOM!!</h1>
-                <p>View all  the Courses</p>
-                <p>       
-                        <% if(currentUser && currentUser.position==="teacher"){ %>
-                    <a class="btn btn-primary btn-large " href="/courses/new">New Course</a>
-                    <% } %>
-                </p>
-            </div>
-        </header> 
-        
-        <div class="row text-center">
-            <% courses.forEach(function(course){ %>
-                <div class="col-md-3 col-sm-6 ">
-                    <div class="thumbnail">                       
-                        <img  src="<%= course.image %>">                    
-                        <div class="caption">
-                            <h4><%= course.name.toUpperCase() %></h4> 
-                        </div>
-                        <p>
-                            <a href="/courses/<%= course._id %>" class="btn btn-primary">More Info</a>
-                        </p>
-                    </div> 
-                </div>    
-            <% }) %>    
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathisi</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/downloaditems.css">
+    <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/svg"
+        sizes="16x16">
+</head>
+
+<body>
+    <div class="background">
+
     </div>
-<!-- <div style="text-align: center">
-<h1>Page under costruction. feel free to visit other pages</h1>
+    <header class="main-header">
+        <div class="brand-container">
+            <a class="brand-link" href="/courses"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
+                    alt="Logo"></a>
+        </div>
 
-<a href="/">HOME</a> -->
-</div>
+        <nav class="main-nav">
+
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="/about">About</a></li>
+                <% if(!currentUser){ %>
+                <li class="main-nav__item"><a href="/login">Login</a></li>
+                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <% } else{ %>
+                <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
+                <li class="main-nav__item"><a href="/logout">Logout</a></li>
+                <% } %>
+                <% if(currentUser && currentUser.position==="teacher"){ %>
+                <a class="Download-btn" href="/courses/new">New Course</a>
+                <% } %>
+            </ul>
+            <!-- <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/"><img src="/appdesigns/Logo.svg" class="logo" alt="Logo"
+                        width="15%"></a>
+            </div> -->
+
+
+        </nav>
+    </header>
+
+    <div class="">
+        <% if(error && error.length>0){ %>
+        <div class=" alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+        <% if(success && success.length>0){ %>
+        <div class=" alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>
+
+    <main>
+        <h1>Welcome to the Courses section <br>Download items</h1>
+        <table id="items" class="main-section">
+            <tr>
+                <th>Course</th>
+                <th>Items</th>
+                <th>More Info</th>
+                <th>Materials</th>
+            </tr>
+<% courses.forEach(function(course){ %>
+            <tr>
+                <td><%= course.name.toUpperCase() %></td>
+                <td><%= course.description %></td>
+                <td><a href="/courses/<%= course._id %>" class="Download-btn">More Info</a></td>
+                <td><a href="<%= course.material%>" class="Download-btn">Download</a></td>
+                <td>
+                    <% if(currentUser && course.author.id.equals(currentUser._id)){ %>
+                    <a class="" href="/courses/<%= course._id %>/edit ">Edit</a>
+                    <form id="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
+                        <button class="">Delete</button>
+                    </form>
+                    <% } %>
+                </td>
+            </tr>
+            <% }) %>
+    
+        </table>
+    </main>
     
     <% include ../partials/footer %>

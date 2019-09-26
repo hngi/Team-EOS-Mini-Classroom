@@ -1,32 +1,94 @@
-<% include ../partials/header %>
-<div class="container">
-    <div class="row">
-        <h1 style="text-align: center;">Create a New Course</h1>
-        <div class="form" style="width: 30%; margin: 25px auto;">
-            <form   action="/courses" method="POST">
-                <div class="form-group"> 
-                    <input class="form-control" type="text" name="name" placeholder="name">                
-                </div>
-                <!-- <div class="form-group">
-                    <input class="form-control" type="number" name="price" placeholder="price" min="0.01" step="0.01">                
-                </div> -->
-                <div class="form-group">
-                    <input class="form-control" type="text" name="image" placeholder="image url">
-                </div>
-                <div class="form-group">
-                        <input class="form-control" type="text" name="material" placeholder="Course material url">                
-                    </div>
-                
-                <div class="form-group">
-                    <input class="form-control" type="text" name="description" placeholder="description">                
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
-                </div>
-            </form>
-            <a href="/courses">Back to Course</a>
-        </div>    
-    </div>    
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathisi</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/createClass.css">
+    <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/svg"
+        sizes="16x16">
+</head>
+
+<body>
+    <div class="background">
+
+    </div>
+    <header class="main-header">
+        <div class="brand-container">
+            <a class="brand-link" href="/courses"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
+                    alt="Logo"></a>
+        </div>
+
+        <nav class="main-nav">
+
+            <ul class="main-nav__items">
+
+                <% if(!currentUser){ %>
+                <li class="main-nav__item"><a href="/login">Login</a></li>
+                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <% } else{ %>
+                <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
+                <li class="main-nav__item"><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+            <!-- <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/"><img src="/appdesigns/Logo.svg" class="logo" alt="Logo"
+                        width="15%"></a>
+            </div> -->
+
+
+        </nav>
+    </header>
+
+    <div class="">
+        <% if(error && error.length>0){ %>
+        <div class=" alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+        <% if(success && success.length>0){ %>
+        <div class=" alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>
+
+
+<div class="content">
+    <div class="content-field">
+        <h2>Create Class</h2>
+        <form class="cc-form" action="/courses" method="POST">
+            <!---<label>Create class</label><br>-->
+            <!-- <input type="text" name="Class Name" placeholder="Class Name" required> <br> -->
+            
+            <input class="" type="text" name="name" placeholder="Course name" required><br>
+
+            <!-- <input class="" type="text" name="image" placeholder="image url"><br> -->
+
+            <input class="" type="text" name="material" placeholder="Course material url" required><br>
+
+            <input class="" type="text" name="description" placeholder="description" required><br>
+
+            <button class="create" class="">Submit</button>
+        </form>
+    </div>
+    <div class="content-img">
+        <img src="/images/undraw_teaching_f1cm.svg" width="60%">
+    </div>
 </div>
+<br>
+
 
 <% include ../partials/footer %>
