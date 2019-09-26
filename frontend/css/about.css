@@ -9,7 +9,7 @@ body {
     background-image: url("../Mini-class\ App\ designs/background.png");
     background-size: cover;
     background-position: top top;
-    height: 100vh;
+    height: 100%;
     font-family: 'Lato', sans-serif;
 }
 li, a, button {
@@ -80,6 +80,7 @@ button:focus {
 @media screen and (max-width:760px) {
     body {
     background-color: #fff;
+    height: 100vh;
 }
     .logo {
   width: 23%;

@@ -140,6 +140,9 @@ button:focus {
   }
   
   @media screen and (max-width:760px) {
+    body {
+      height: 100vh;
+    }
       .logo {
   width: 20%;
   }
