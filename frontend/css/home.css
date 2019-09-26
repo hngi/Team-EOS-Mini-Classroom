@@ -9,7 +9,7 @@ body {
     background-image: url("../Mini-class\ App\ designs/background.png");
     background-size: cover;
     background-position: top top;
-    height: 100vh;
+    height: 100%;
     font-family: 'Lato', sans-serif;
 }
 li, a, button {
