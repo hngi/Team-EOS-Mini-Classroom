@@ -1,5 +1,7 @@
-
-     .picture{
+* {
+    box-sizing: border-box;
+}
+    .picture{
     display: flex;
     position: absolute;
     width: 500px;
