@@ -4,15 +4,15 @@
         <h1 style="text-align: center;"> Edit Comment</h1>
         <div class="form" style="width: 30%; margin: 25px auto;">
             <form   action="/courses/<%= course_id %>/comments/<%= comment._id %>?_method=PUT " method="POST">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <input class="form-control" type="text" name="comment[text]" value="<%= comment.text %>">                
-                </div>
-                
+                </div> -->
+                <textarea name="comment[text]" id="" cols="30" rows="10"><%= comment.text %></textarea>
                 <div class="form-group">
                     <button class="btn btn-lg btn-primary btn-block">Submit</button>
                 </div>
             </form>
-            <a href="/courses">Back to Campgrounds</a>
+            <a href="/courses">Back to Coures</a>
         </div>    
     </div>    
 </div>

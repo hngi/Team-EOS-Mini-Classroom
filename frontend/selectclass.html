@@ -1,34 +1,31 @@
  <!DOCTYPE html>
  <html lang=" en">
      <head>
-         <title>Mini-Classroom | Create A Class</title>
+         <title>Mini-Classroom | Select A Class</title>
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link href="selectclass.css" rel="stylesheet">
+        <link rel="icon" href="../frontend/Mini-class App designs/mathisi logo.png" type="image/png">
+         <link href="./css/selectclass.css" rel="stylesheet">
      </head>
      <body>
-        <div class="container">         
-            <div class="child">
-             <img class="img1" src="Mini-class App designs/mathisi logo.png" alt="Mathisi logo">
-            </div>
-            <div class="child signout"><br><br>
-            <pre><button class="signoutbutton" type="submit">Sign Out</button></pre>
-            </div>
-        </div>
+        <header>
+            <img src="./Mini-class App designs/Logo.svg" class="logo" alt="Logo" width="13%">
+            <a href="getStarted.html" class="sign-out-btn">Sign Out</a>
+        </header>
             
-        <div class="container">
-            <div class="child select"> <h2>
-                            Create A Class
-                                </h2>
-                
-            <form action="" method="post">
-                <input type="text" name="fullname" value="" required placeholder="Name A Class"><br><br>
-                <button class="formbutton" type="submit">Create</button>
+    <div class="content">
+        <div class="content-field">
+            <h2>Select Class</h2>
+            <form class="cc-form" action="" method="POST">
+                <!---<label>Create class</label><br>-->
+                <input type="text" name="Class Name" placeholder="Class Name" required> <br>
+                <a href="" class="select">Select</a>
             </form>
-            </div>
-            <div class="child">
-                <img class="img2" src="Mini-class App designs/teacher.png" alt="A standing teacher's Svg">
-            </div>
         </div>
+        <div class="content-img">
+            <img src="./Mini-class App designs/undraw_exams_g4ow.svg" width="60%">
+        </div>
+    </div>
+    <br>
      </body>
 </html>

@@ -68,50 +68,62 @@
     <div class="main">
 
         <div class="content-holder">
-            <div >
-                <div class="chat-panel">
-                    <h2 id="subject">Further Math</h2>
+            <div style="width: 50%">
+                <div class="chat-panel" style="">
+                    <h2 style="" id="subject"> TITLE: <%= course.name.toUpperCase()%></h2>
                     <hr />
 
                     <div class="chat-item">
-                        Morning Class, Today we'll talk about Mean deviation
-                        Morning Class, Today we'll talk about Mean deviation
-                        Morning Class, Today we'll talk about Mean deviation
-                        Morning Class, Today we'll talk about Mean deviation
-                        Morning Class, Today we'll talk about Mean deviation
-                        Morning Class, Today we'll talk about Mean deviation
-                       
+                        <% course.comments.forEach(function(comment){ %>
 
+                        <div style="width: 400px">
+                            <strong><%= comment.author.username %> - <%= comment.author.position %> </strong>
+                            <span><%= comment.createdAt.toLocaleDateString('en-US') %></span>
+                            <p style="display: block">
+                                <%= comment.text %>
+                            </p>
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                            <a href="/courses/<%= course._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                            <form id="delete-form"
+                                action="/courses/<%= course._id %>/comments/<%= comment._id %>?_method=DELETE"
+                                method="POST">
+                                <button>Delete</button>
+                            </form>
+                            <% } %>
+                        </div>
+
+                        <hr>
+                        <% }) %>
                     </div>
 
                 </div>
-               
-
                 <br><br>
+              
+                
                 <div class="chat-form">
-                    <form  class="comment-form" action="">
-                        <input type="text" placeholder="Answer Questions" />
+                    <form class="comment-form" action="/courses/<%= course._id %>/comments " method="POST">
+                        <input type="text" name="comment[text]" placeholder="Answer Questions" />
                         <button><img
                                 src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569419882/Vector" /></button>
 
                     </form>
-                        
+
                 </div>
+               
             </div>
             <div id="carousel-container">
                 <div class="carousel">
-                    <img
-                        src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569420981/classroom" alt="Classroom">
+                    <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569420981/classroom" alt="Classroom">
 
-                
+
+                </div>
+                <!-- <br><br><br><br><br> -->
+            </div>
         </div>
-        <!-- <br><br><br><br><br> -->
+
     </div>
 </div>
-
-</div>
-</div>
-<div class="col-md-4"></div>
+<div style="height: 150%" class="col-md-4"></div>
 <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569422644/Ellipse" class="top-right" alt="">
 <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569422643/x" class="bottom-right" alt="">
 

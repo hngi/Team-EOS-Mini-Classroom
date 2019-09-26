@@ -20,7 +20,7 @@
 .chat-panel {
     border: 1px solid #274970;
     position: relative;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     min-height: 400px;
     max-height: 500px;
     overflow: scroll;
@@ -104,17 +104,17 @@ hr {
 
 } */
 
-/* .top-right {
+.top-right {
     position: absolute;
     top: 0;
     right: 0;
-} */
+}
 
-/* .bottom-right {
+.bottom-right {
     position: absolute;
     bottom: 0;
     right: 0;
-} */
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
