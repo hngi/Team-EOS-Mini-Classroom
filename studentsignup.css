@@ -1,0 +1,63 @@
+body{
+    background-image: url("Mini-class\ App\ designs/background.png");  
+    margin: 0;
+    padding:0;
+}
+img {
+    max-width:10em;
+    height:auto;
+    padding-left: 45%;
+    padding-bottom: 2em;
+}
+
+
+section1 h2{
+    text-align: center;
+    padding-bottom: 2em;
+}
+section2{
+    text-align: center;
+    padding-bottom: 2em;
+}
+section3{
+    text-align: center;
+}
+.button{
+    border-left-width: 20px;
+    border-right-width: 20px;
+    background: blue;
+    border-left-color: blue;
+    border-right-color: blue;
+    color:#fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 2em;
+}
+
+form input{
+    text-align: center;
+    border-left-style:hidden;
+    border-right-style:hidden;
+    border-top-style:hidden;
+    border-bottom-style:solid;
+    border-bottom-color: blue;
+
+}
+@media screen and (min-width: 480px) {
+    body {
+      background-image: flex;
+    }
+    section1 h2{
+        padding-bottom: 1.5em;
+    }
+    section2{
+        padding-bottom: 1.5em;
+    }
+
+    button{
+        margin-bottom:1.5em;
+    }
+  }
