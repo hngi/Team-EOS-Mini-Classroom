@@ -1,144 +1,168 @@
 
      .picture{
-    display: flex;
-    position: absolute;
-    width: 500px;
-    height: 692.31px;
-    left: 786px;
-    top: 60px;
-    
-    background: url(21425.jpg)
-    }
-    .logo{
-        display: flex;
-        position:absolute;
-        left: 43.06%;
-        right: 43.06%;
-        top: 0%;
-        bottom: 80.47%;
-        height: 120px;
-        width: 120px;
-        }
-        .Ellipse2{
         display: flex;
         position: absolute;
-        left: 94.51%;
-        right: -1.46%;
-        top: -2.45%;
-        bottom: 92.69%;
+        width: 500px;
+        height: 692.31px;
+        left: 65%;
+        top: 15%;
+        
+        background: url(21425.jpg)
+        }
+        .logo{
+            display: flex;
+            position:absolute;
+            left: 43.06%;
+            right: 43.06%;
+            top: 0%;
+            bottom: 80.47%;
+            height: 120px;
+            width: 120px;
+            }
+            .Ellipse2{
+            display: flex;
+            position: absolute;
+            left: 94.51%;
+            right: -1.46%;
+            top: -2.45%;
+            bottom: 92.69%;
+        
+                }
+            .x{
+                display: flex;
+                position: absolute;
+                left: 96.53%;
+                right: -3.47%;
+                top: 88.28%;
+                bottom: 1.96%;
+            }    
+            h1{
+            display:flex;
+            position: absolute;
+            width: 275px;
+            height: 20px;
+            left: 35%;
+            top: 25%;
+            
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 43px;
+            
+            color: #274970;
+            
+            }
+           
+            .email{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 450px;
+            height: 40px;
+            top: 45%;
+            left: 20%;
+            flex-direction: column;
+            
+            }
+            
+            
+            .text-box input{
+                display: flex;
+                border-bottom: 1px solid #274970;
+                outline: none;
+            }
+            .email-box input{
+                display: flex;
+                border-bottom: 1px solid #274970;
+                outline: none;
+            }
+            .Password{
+            display:flex;
+            position: absolute;
+            justify-content: left;
+            width: 450px;
+            height: 40px;
+            left: 20%;
+            top: 60%;
+            text-align: left;
+            margin-top: 10px;
+            flex-direction: column;
+            
+            }
+            .checkbox{
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            width: 195px;
+            height: 22px;
+            left: 40%;
+            top: 75%;
+            }
+            p{
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            width: 195px;
+            height: 22px;
+            left: 48%;
+            top: 74%;
+            }
+            .button{
+            position: absolute;
+            justify-content: center;
+            display: flex;
+            width: 290px;
+            height: 50px;
+            left: 20%;
+            top: 83%;
+            background: #274970;
+            border-radius: 75px;
+            cursor: pointer;
+            }
+            .footer{
+                    display: flex;
+                    left: 30%;
+                    top: 94%;
+                    width: 30px;
+                    width: 100%;
+                    text-align: left;
+                    position: absolute;
+        
+                    font-size: 25px;
+                
+            
+            }
+            .col-md-4{
+    
+                
+                position: absolute;
+                width: 50px;
+                height: 120%;
+                left: 0.71px;
+                top: 0px;
+                
+                background: #C63305;
+                transform: rotate(0.27deg);
     
             }
-        .x{
-            display: flex;
-            position: absolute;
-            left: 96.53%;
-            right: -3.47%;
-            top: 88.28%;
-            bottom: 1.96%;
-        }    
-        h1{
-        display:flex;
-        position: absolute;
-        width: 275px;
-        height: 20px;
-        left: 200px;
-        top: 150px;
-        
-        font-family: Lato;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 36px;
-        line-height: 43px;
-        
-        color: #274970;
-        
-        }
-       
-        .email{
-        display: flex;
-        position: absolute;
-        width: 450px;
-        height: 40px;
-        left: 180px;
-        top: 250px;
-        text-align: center;
-        
-        }
-        
-        
-        .text-box input{
-            display: flex;
-            border-bottom: 1px solid #274970;
-            outline: none;
-        }
-        .Password{
-        position: absolute;
-        width: 450px;
-        height: 40px;
-        left: 180px;
-        top: 300px;
-        text-align: center;
-        margin-top: 10px;
-        
-        }
-        .checkbox{
-        display: flex;
-        position: absolute;
-        width: 195px;
-        height: 22px;
-        left: 300px;
-        top: 380px;
-        }
-        p{
-        display: flex;
-        position: absolute;
-        width: 195px;
-        height: 22px;
-        left: 426px;
-        top: 380px;
-        }
-        .button{
-        position: absolute;
-        width: 290px;
-        height: 50px;
-        left: 200px;
-        top: 470px;
-        background: #274970;
-        border-radius: 75px;
-        }
-        .footer{
-                display: flex;
-                left: 90px;
-                margin-top: 600px;
-                width: 30px;
+            .container{
                 width: 100%;
-                text-align: left;
-                position: relative;
+            }
     
-                font-size: 25px;
+            @media only screen and (max-device-width : 768px){
+                   .email{
+                       display: flex;
+                       width: 30%;
+                       justify-content: evenly;
+                       flex-direction: column;
+                       background: #C63305;
+                   }
+            }
+             
+        
             
-        
-        }
-        .col-md-4{
-
+    
             
-            position: absolute;
-            width: 50px;
-            height: 120%;
-            left: 0.71px;
-            top: 0px;
             
-            background: #C63305;
-            transform: rotate(0.27deg);
-        }
-
-        @media (max-width: 450px){
-         body{
-             background: #274970;
-         }
-        }
-        
-
-        
-        
-        
+            
