@@ -9,14 +9,7 @@ body{
    font-family: 'Lato', sans-serif;
 }
 
-.background{
-/* background-image: url("/appdesigns/background.png");
-background-size: cover;
-background-position: center;
-height: 95vh;
-position: fixed;
-z-index: 1; */
-}
+
 .thumbnail img{
     width: 100%;
 }

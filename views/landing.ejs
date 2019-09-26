@@ -1,173 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/png">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <title>Welcome To Maithisi Learning Class</title>
+</head>
 
-  <!-- <!DOCTYPE html>
-  <html>
-      <head>
-          <title>YelpCamp</title>
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-          <link rel="stylesheet" href="/stylesheets/landing.css">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
-      </head>
-      <body>
-      
-      <div class="container">
-          <% if(error && error.length > 0){ %>
-              <div class="alert alert-danger" role="alert">
-                  <%= error %>
-              </div>
-          <% } %>
-          <% if(success && success.length > 0){ %>
-              <div class="alert alert-success" role="alert">
-                  <%= success %>
-              </div>
-          <% } %>
-      </div>
-      
-      <div id="landing-header">
-           <h1>Welcome to EOS CLASSROOM</h1>
-          <a href="/courses" class="btn btn-lg btn-success">View All Courses</a>
-      </div>
-      
-      <ul class="slideshow">
-        <li></li>
-        <li></li>
-        <li></li> 
-        <li></li>
-        <li></li>
-      </ul> -->
-
-    <!-- <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="/stylesheets/website.css">
-        <title>Mathisi</title>
-    </head>
-
-    <body class="aside">
-        <div class="container">
-            <% if(error && error.length > 0){ %>
-            <div class="alert alert-danger" role="alert">
-                <%= error %>
-            </div>
-            <% } %>
-            <% if(success && success.length > 0){ %>
-            <div class="alert alert-success" role="alert">
-                <%= success %>
-            </div>
-            <% } %>
-        </div>
-        <div class="color">
-           <a href="/"><img src="/appdesigns/Logo.svg" alt="logo" class="logo"></a>
-            <nav>
-                <ul>
-                    
-                    <li class="about">About</li>
-                    <% if(!currentUser){ %>
-                    <li class="students"><a style="color: #274970;" href="/login">Students</a></li>
-                    <li class="teachers"><a style="color: #274970;" href="/login">Teachers</a></li>
-                    <% } else{ %>
-                    <li class="students"><a href="#">Hello <%= currentUser.username.toUpperCase() %></a></li>
-                    <li class="teachers"><a href="/logout">Logout</a></li>
-                    <% } %>
-                    <button class="bt" class="button"> <a href="/courses" class="">View All Courses</a></button>
-                </ul>
-            </nav>
-            <div class="ci"></div>
-        </div>
-        <div class="read">
-            <img src="/images/20490.png" alt="">
-        </div>
-
+<body>
+    <header>
+        <img src="/appdesigns/Logo.svg" class="logo" alt="Logo" width="15%">
+        <nav>
+            <ul class="nav__links">
+                <li class="home"><a href="/">Home</a></li>
+                <li class="about"><a href="/about">About</a></li>
+                <li class="students"><a href="/login">Students</a></li>
+                <li class="teachers"><a href="/login">Teachers</a></li>
+            </ul>
+        </nav>
+        <a href="/courses" class="get-started"><button>View Courses</button></a>
+    </header>
+    <div class="container">
         <div class="p1">
-            <p><strong>Mathisi Mini Classroom</strong> is a virtual learning platform.</p>
-            <p>Majorly focused on Secondary School students</p>
+            <p><strong>Mathisi Mini Classroom</strong> is a virtual learning platform. <br> Majorly focused on
+                Secondary School students</p>
         </div>
-        <div class="p2">
-            <p>Success is no accident.</p>
-            <p>It's hard work, perserverance, </p>
-            <p>learning, studying, sacrifice and most</p>
-            <p>of all love for what you are doing or</p>
-            <p> learning to do.</p>
-            <hr>
-            <button class="button"><span>Learn More</span> </button>
-        </div> -->
-
-        <!DOCTYPE html>
-        <html lang="en">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/png">
-            <link rel="stylesheet" href="/stylesheets/home.css">
-            <title>Welcome To Maithisi Learning Class</title>
-        </head>
-
-        <body>
-            <header>
-                <img src="/appdesigns/Logo.svg" class="logo" alt="Logo" width="15%">
-                <nav>
-                    <ul class="nav__links">
-                        <li class="home"><a href="/">Home</a></li>
-                        <li class="about"><a href="/about">About</a></li>
-                        <li class="students"><a href="/login">Students</a></li>
-                        <li class="teachers"><a href="/login">Teachers</a></li>
-                    </ul>
-                </nav>
-                <a href="/courses" class="get-started"><button>View Courses</button></a>
-            </header>
-            <div class="container">
-                <div class="p1">
-                    <p><strong>Mathisi Mini Classroom</strong> is a virtual learning platform. <br> Majorly focused on
-                        Secondary School students</p>
-                </div>
-                <div class='row'>
-                    <div class='column'>
-                        <div class='column-left'>
-                            <div class="p2">
-                                <p>Success is no accident. It's hard work, perserverance,
-                                    learning, studying, sacrifice and
-                                    most of all love for what you are doing or learning to do.
-                                </p>
-                                <hr>
-                                <a href="/about" class="learn-more">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='column'>
-                        <div class='column-right'>
-                            <img src="/images/20490.svg" class="image-right" alt="">
-                        </div>
+        <div class='row'>
+            <div class='column'>
+                <div class='column-left'>
+                    <div class="p2">
+                        <p>Success is no accident. It's hard work, perserverance,
+                            learning, studying, sacrifice and
+                            most of all love for what you are doing or learning to do.
+                        </p>
+                        <hr>
+                        <a href="/about" class="learn-more">Learn More</a>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class='row-3'>
-                    <div class='column'>
-                        <div class='column-left'>
-                            <img src="/images/undraw_teaching_f1cm.svg" class="image-left" alt="">
+            <div class='column'>
+                <div class='column-right'>
+                    <img src="/images/20490.svg" class="image-right" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class='row-3'>
+            <div class='column'>
+                <div class='column-left'>
+                    <img src="/images/undraw_teaching_f1cm.svg" class="image-left" alt="">
 
-                        </div>
-                    </div>
-                    <div class='column'>
-                        <div class='column-right-3'>
-                            <div class="p3">
-                                <p>The capacity to learn is a gift; the ability to learn is a skill; the willingness to
-                                    learn is a choice.</p>
-                                <a href="/about" class="learn-more">Learn More</a>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class='column'>
+                <div class='column-right-3'>
+                    <div class="p3">
+                        <p>The capacity to learn is a gift; the ability to learn is a skill; the willingness to
+                            learn is a choice.</p>
+                        <a href="/about" class="learn-more">Learn More</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-        </body>
+</body>
 
-        </html>
-  
-  <% include partials/footer %>
+</html>
+
+<% include partials/footer %>
