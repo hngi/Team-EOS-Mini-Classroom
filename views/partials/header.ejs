@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EOS MINI CLASSROOM</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Mathisi</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
     <link rel="stylesheet" href="/stylesheets/main.css">
+    <!-- login css-->
+    <link rel="stylesheet" href="/stylesheets/teacherlogin.css">
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+    <link rel="stylesheet" href="/stylesheets/classroom.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/svg"
+        sizes="16x16">
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
+    <div class="background">
+
+    </div>
+    <header class="main-header">
+        <div class="brand-container">
+            <a class="brand-link" href="/courses"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
+                    alt="Logo" ></a>
+        </div>
+        
+        <nav class="main-nav" >
+        
+            <ul class="main-nav__items">
+
+                <% if(!currentUser){ %>
+                <li class="main-nav__item"><a href="/login">Login</a></li>
+                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <% } else{ %>
+                <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
+                <li class="main-nav__item"><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        <!-- <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                     aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -24,33 +49,22 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="/">Classroom</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="<%= typeof page !== 'undefined' && page === 'courses' ? 'active' : '' %>"><a
-                            href="/courses">Home</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <% if(!currentUser){ %>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Sign Up</a></li>
-                    <% } else{ %>
-                    <li><a href="#">Signed In As <%= currentUser.username.toUpperCase() %></a></li>
-                    <li><a href="/logout">Logout</a></li>
-                    <% } %>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
+                <a class="navbar-brand" href="/"><img src="/appdesigns/Logo.svg" class="logo" alt="Logo"
+                        width="15%"></a>
+            </div> -->
+        
+    
+</nav>
+    </header>
+    
+    <div class="">
         <% if(error && error.length>0){ %>
-        <div class="alert alert-danger" role="alert">
+        <div class=" alert-danger" role="alert">
             <%= error %>
         </div>
         <% } %>
         <% if(success && success.length>0){ %>
-        <div class="alert alert-success" role="alert">
+        <div class=" alert-success" role="alert">
             <%= success %>
         </div>
         <% } %>

@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-<div class="container">
+<!-- <div class="container"> 
     <div class="row">
         <h1 style="text-align: center;">Sign Up </h1>
         <div class="form" style="width: 30%; margin: 25px auto;">
@@ -13,11 +13,11 @@
                     </div>
                     <div class="form-group">
                             <input class="form-control" type="text" name="username" placeholder="username">
-                        </div>
+                        </div> -->
                 <!-- <div class="form-group">
                     <input class="form-control" type="position" name="position" placeholder="Studend or Teacher ">
                 </div> -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <select name="position" id="position">
                         <option value="student">Student</option>
                         <option value="teacher">Teacher</option>
@@ -32,8 +32,47 @@
             </form>
         </div>
     </div>
+</div> -->
+
+<div class="register-container">
+
+    <div class="orangeBox"></div>
+    <div class="formContainer">
+        <!-- <img src="mathisi logo.png" alt="mathisi logo"> -->
+        <h1 class="register-header"> Sign up </h1>
+
+        <form action="/register " method="POST">
+            <div class="form-group">
+                <select name="position" id="position">
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+
+              <input class="form-control" type="text" name="firstname" placeholder="Firstname">
+            <input class="form-control" type="text" name="lastname" placeholder="Lastname">
+            
+
+            <input type="text" placeholder="Email Adress" name="username" required>
+
+            <input type="password" placeholder="Password" name="password" required>
+
+<br>
+            
+            <button type="submit" class="signupbtn">Sign up</button>
+        </form>
+
+        <p> Have an account already? <a href="/login">log in</a></p>
+
+    </div>
+
 </div>
 
+<div class="col-md-4">
 
+</div>
+
+<img src="/images/Ellipse2.png" class="Ellipse2">
+<img src="/images/x.png" class="x">
 
 <% include ./partials/footer %>
