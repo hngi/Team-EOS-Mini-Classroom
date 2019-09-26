@@ -11,32 +11,33 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-    body{
-        position: relative;
-    }
+    body {
+    background-image: url("./Mini-class\ App\ designs/background.png");
+    background-size: cover;
+    background-position: top top;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
     .parent{
             display: grid;
             grid-template-columns: 0.5fr 9.5fr;
             grid-auto-rows: minmax(100px, auto);
     }
 
-    .aside{
-        background:#C63305;
-    }
-
-    button.sign-out{
-        float:right;
-        margin: 55px 60px 0 auto;
-        background-color: #274970;
-        border-radius: 75px;
-        padding: 10px;
-        font-family: Lato;
-        font-size: 16px;
-        color:#fff;
-        border: none;
-        width: 100px;
-        height: 40px;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+.sign-out-btn {
+    text-decoration: none;
+    background-color:#274970;
+    color: #fff;
+    padding: 9px 35px;
+    border-radius: 30px;
+}
     .content{
         display: grid;
         grid-template-columns: 5.5fr 4.5fr;
@@ -161,11 +162,10 @@
         </div>
 
         <div class="main">
-            <nav>
-                <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo.png" alt="mathisi logo">
-                        
-                <button class="sign-out">Sign Out</button>
-            </nav>
+        <header>
+            <img src="./Mini-class App designs/Logo.svg" class="logo" alt="Logo" width="15%">
+            <a href="#" class="sign-out-btn">Sign Out</a>
+        </header>
 
             <div class="content">
                 <div class="chat-panel">
@@ -204,10 +204,10 @@
             <br><br><br><br><br>
         </div>
         
-        <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569422644/Ellipse"
+        <!-- <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569422644/Ellipse"
         class="top-right" alt="">
         <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569422643/x"
-        class="bottom-right" alt="">
+        class="bottom-right" alt=""> -->
 
     </div>
    
