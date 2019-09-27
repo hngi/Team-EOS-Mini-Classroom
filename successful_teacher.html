@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel = "icon" type = "image/x-icon" href = "https://res.cloudinary.com/meritiyke/image/upload/v1569388153/Logo_1_uwxjbi.svg"/>
+    <link rel = "apple-touch-icon" type = "image/x-icon" href = "https://res.cloudinary.com/meritiyke/image/upload/v1569388153/Logo_1_uwxjbi.svg"/>
+    <title>Sucessful Login</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100%;
+    }
+       
+        #logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p {
+            text-align: center;
+            font-size: 120%;
+            color: #274970;
+            padding-top: 1.5%;
+        }
+        menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #274970;
+            border-radius: 25%;
+            padding: 5px 8px;
+            margin-left:8%;
+            margin-top:2%;
+            background-color: #274970;
+            color: white;
+        }
+    
+        a:hover{
+            background: black;
+        }
+    
+        a:active{
+            color: red;
+        }
+        .teacher {
+            float: right;
+            display: block;
+            margin-right: 6%;
+        }
+    
+       
+    
+        @media(min-width: 768px) {
+           
+            #empty{
+            border: 1px solid red;
+            background: red;
+            padding-bottom: 100%;
+            width: 7%;
+            float: left;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #274970;
+            border-radius: 25%;
+            padding: 10px 15px;
+            margin-left:8%;
+            margin-top:2%;
+            background-color: #274970;
+            color: white;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <p id="empty"></p>
+    <main>
+        <img id="logo" src="https://res.cloudinary.com/meritiyke/image/upload/v1569388153/Logo_1_uwxjbi.svg" alt="logo" width="10%" height="20%">
+        <p><bold>TEACHER</bold></p>
+        <menu>
+         <a href="#">Create a class</a>
+            <a href="#">Add Item</a>
+            <a href="#">Log out</a>
+        </menu>
+        <img class="teacher" src="https://res.cloudinary.com/meritiyke/image/upload/v1569388958/download_1_ttf4jv.png" alt="">
+    </main>
+</body>
+</html>
