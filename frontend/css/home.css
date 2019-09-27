@@ -21,7 +21,7 @@ li, a, button {
 .logo {
   width: 10%;
   margin-right: auto;
-  margin-left: 50px;
+  margin-left: 80px;
 }
 header {
   display: flex;
@@ -145,6 +145,7 @@ button:focus {
     }
       .logo {
   width: 20%;
+  padding-left:100px;
   }
   .nav__links li{
   display: flex;
@@ -216,5 +217,18 @@ button {
 }
  hr{
    margin: 10px
+  }
+}
+@media screen and (max-width:413px) {
+  body {
+    background-image: none;
+  }
+  .logo{
+    display:none;
+  }
+  button{
+    width:auto;
+    text-align: center;
+    justify-content: center;
   }
 }
