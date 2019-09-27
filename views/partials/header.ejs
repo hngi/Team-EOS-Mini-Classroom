@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/stylesheets/teacherlogin.css">
     <link rel="stylesheet" href="/stylesheets/signup.css">
     <link rel="stylesheet" href="/stylesheets/classroom.css">
+     <link rel="stylesheet" href="/stylesheets/ham.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/svg"
         sizes="16x16">
@@ -22,7 +23,7 @@
     <div class="background">
 
     </div>
-    <header class="main-header">
+    <header class="main-header desk-nav">
         <div class="brand-container">
             <a class="brand-link" href="/courses"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
                     alt="Logo" ></a>
@@ -56,6 +57,41 @@
     
 </nav>
     </header>
+
+    <header class="mobile-nav-header">
+        <div class="moblie-header-cont">
+            <a class="navbar-brand" href="/"><img style="width: 100px" src="/images/Logo.svg" class="" alt="Logo"></a>
+
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+        </div>
+
+
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__items">
+
+                <% if(!currentUser){ %>
+                <li class="main-nav__item"><a href="/login">Login</a></li>
+                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <li class="main-nav__item"><a href="/about">About</a></li>
+                <% } else{ %>
+                <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
+                <li class="main-nav__item"><a href="/logout">Logout</a></li>
+                <li class="main-nav__item"><a href="/about">About</a></li>
+                <% } %>
+                <!-- <li class="home mobile-nav__item"><a href="/">Home</a></li>
+                <li class="about mobile-nav__item"><a href="/about">About</a></li>
+                <li class="students mobile-nav__item"><a href="#student">Students</a></li>
+                <li class="teachers mobile-nav__item"><a href="#teacher">Teachers</a></li> -->
+
+            </ul>
+        </nav>
+
+    </header>
+
     
     <div class="">
         <% if(error && error.length>0){ %>

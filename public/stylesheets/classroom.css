@@ -20,7 +20,7 @@
 .chat-panel {
     border: 1px solid #274970;
     position: relative;
-    /* margin-left: 25px; */
+    /* margin-left: 25px; */ 
     min-height: 400px;
     max-height: 500px;
     overflow: scroll;
@@ -108,17 +108,21 @@ hr {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
 }
 
 .bottom-right {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: -1;
 }
-
+.content-chat {
+margin-bottom: 100px;
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .content {
+    .content-holder {
         display: flex;
         flex-direction: column;
     }
@@ -127,6 +131,13 @@ hr {
         width: 100%;
     }
 
+    .content-pic{
+        order: 1;
+    }
+    .content-chat{
+    order: 2;
+    width: 100%;
+    }
     #carousel-container {
         width: 100%;
     }

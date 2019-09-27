@@ -13,12 +13,14 @@
 position: absolute;
 top: 0;
 right: 0;
+z-index: -1;
 }
 
 .x {
     position: absolute;
     bottom:  0;
     right: 0;
+    z-index: -1;
 }
 
 h1 {
@@ -62,7 +64,7 @@ margin: 30px 0;
 .checkbox {
     
     display: inline;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 p {
@@ -81,11 +83,12 @@ p {
 
 .col-md-4 {
     width: 50px;
-    height: 100vh;
+    height: 110vh;
     background: #C63305;
     transform: rotate(0.27deg);
     position: absolute;
     top: 0;
+    z-index: -1
 }
 .form-container {
     width: 30%;
@@ -105,4 +108,5 @@ p {
 .login-container{
 display: flex;
 justify-content: space-around;
+margin-bottom: 10px;
 }

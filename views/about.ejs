@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/png">
     <link rel="stylesheet" type="text/css" href="/stylesheets/about.css">
+     <link rel="stylesheet" href="/stylesheets/ham.css">
 
     <title>About Maithisi</title>
 
 </head>
 
 <body>
-    <header>
+    <header class="desk-nav">
         <img src="/images/Logo.svg" class="logo" alt="Logo">
         <nav>
             <ul class="nav__links">
@@ -24,6 +25,29 @@
             </ul>
         </nav>
         <a href="/getStarted" class="get-started"><button>Get Started</button></a>
+    </header>
+    <header class="mobile-nav-header" >
+        <div class="moblie-header-cont">
+        <a class="navbar-brand" href="/"><img style="width: 100px" src="/images/Logo.svg" class="" alt="Logo"></a>
+
+        <button class="toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+        </button>
+        </div>
+            
+
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__items">
+                <li class="home mobile-nav__item"><a href="/">Home</a></li>
+                <li class="about mobile-nav__item"><a href="/about">About</a></li>
+                <li class="students mobile-nav__item"><a href="#student">Students</a></li>
+                <li class="teachers mobile-nav__item"><a href="#teacher">Teachers</a></li>
+                
+            </ul>
+        </nav>
+
     </header>
     <div class="mainbody">
         <p class="mb-5">Welcome to Mathisi,</p>
@@ -48,6 +72,8 @@
         <br> Biology
         <br> Economics
     </div>
+
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

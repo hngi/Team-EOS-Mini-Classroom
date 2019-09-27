@@ -1,4 +1,28 @@
 <% include ../partials/header %>
+
+<header class="mobile-nav-header">
+    <div class="moblie-header-cont">
+        <a class="navbar-brand" href="/"><img style="width: 100px" src="/images/Logo.svg" class="" alt="Logo"></a>
+
+        <button class="toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+        </button>
+    </div>
+
+
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="home mobile-nav__item"><a href="/">Home</a></li>
+            <li class="about mobile-nav__item"><a href="/about">About</a></li>
+            <li class="students mobile-nav__item"><a href="#student">Students</a></li>
+            <li class="teachers mobile-nav__item"><a href="#teacher">Teachers</a></li>
+
+        </ul>
+    </nav>
+
+</header>
 <div class="container">
     <div class="row">
         <h1 style="text-align: center;"> Edit Comment</h1>
@@ -17,4 +41,5 @@
     </div>    
 </div>
 
+<script src="/js/main.js"></script>
 <% include ../partials/footer %>

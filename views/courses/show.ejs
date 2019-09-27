@@ -67,10 +67,10 @@
 
     <div class="main">
 
-        <div class="content-holder">
-            <div style="width: 50%">
-                <div class="chat-panel" style="">
-                    <h2 style="" id="subject"> TITLE: <%= course.name.toUpperCase()%></h2>
+        <div class="content-holder" >
+            <div style="" class="content-chat">
+                <div class="chat-panel" >
+                    <h2 id="subject"> TITLE: <%= course.name.toUpperCase()%></h2>
                     <hr />
 
                     <div class="chat-item">
@@ -111,9 +111,10 @@
                 </div>
                
             </div>
-            <div id="carousel-container">
+            <div style="" id="carousel-container" class="content-pic">
                 <div class="carousel">
-                    <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569420981/classroom" alt="Classroom">
+                    <img style="WIDTH: 100%;"
+                        src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569420981/classroom" alt="Classroom">
 
 
                 </div>
@@ -128,5 +129,5 @@
 <img src="https://res.cloudinary.com/dexcjehc5/image/upload/v1569422643/x" class="bottom-right" alt="">
 
 
-
+<script src="/js/main.js"></script>
 <% include ../partials/footer %>
