@@ -35,24 +35,12 @@
 
                 <% if(!currentUser){ %>
                 <li class="main-nav__item"><a href="/login">Login</a></li>
-                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <li class="main-nav__item"><a href="/getstarted">Sign Up</a></li>
                 <% } else{ %>
                 <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
                 <li class="main-nav__item"><a href="/logout">Logout</a></li>
                 <% } %>
             </ul>
-        <!-- <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <a class="navbar-brand" href="/"><img src="/appdesigns/Logo.svg" class="logo" alt="Logo"
-                        width="15%"></a>
-            </div> -->
         
     
 </nav>
@@ -75,7 +63,7 @@
 
                 <% if(!currentUser){ %>
                 <li class="main-nav__item"><a href="/login">Login</a></li>
-                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <li class="main-nav__item"><a href="/getstarted">Sign Up</a></li>
                 <li class="main-nav__item"><a href="/about">About</a></li>
                 <% } else{ %>
                 <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>

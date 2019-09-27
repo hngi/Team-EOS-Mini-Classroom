@@ -30,7 +30,7 @@
 
                 <% if(!currentUser){ %>
                 <li class="main-nav__item"><a href="/login">Login</a></li>
-                <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+                <li class="main-nav__item"><a href="/getstarted">Sign Up</a></li>
                 <% } else{ %>
                 <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
                 <li class="main-nav__item"><a href="/logout">Logout</a></li>
@@ -69,7 +69,7 @@
 
             <% if(!currentUser){ %>
             <li class="main-nav__item"><a href="/login">Login</a></li>
-            <li class="main-nav__item"><a href="/register">Sign Up</a></li>
+            <li class="main-nav__item"><a href="/getstarted">Sign Up</a></li>
             <% } else{ %>
             <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
             <li class="main-nav__item"><a href="/logout">Logout</a></li>
