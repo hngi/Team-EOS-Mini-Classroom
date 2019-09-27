@@ -15,6 +15,11 @@ header {
     align-items: center;
     padding: 22px 8%;
 }
+
+.main-ourse{
+width: 80%;
+margin: auto;
+}
 .sign-out-btn {
     text-decoration: none;
     background-color:#274970;
@@ -27,7 +32,7 @@ h1 {
     margin-bottom: 50px;
 }
  .main-section {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 } 
@@ -57,10 +62,11 @@ h1 {
     text-decoration: none;
     background-color:#274970;
     color: #fff;
-    padding: 5px 25px;
-    border-radius: 30px;
-    font-size: 13px;
+    /* padding: 5px 25px; */
+    /* border-radius: 30px; */
+    font-size: 1rem;
 }
+
 @media screen and (max-width: 760px) {
         body {
         height: 100vh;

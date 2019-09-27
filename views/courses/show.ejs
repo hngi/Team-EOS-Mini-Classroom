@@ -1,65 +1,8 @@
 <% include ../partials/header %>
 
-<!-- <div class="container "> 
-    <div class="row">
-        <div class="col-md-3">
-            <p class="lead">CLASSROOM</p> 
-            <div class="list-group">
-                <li class="list-group-item active">Lecture by: <%= course.author.fullname%></li>
-                <li class="list-group-item">
-                    <a href="<%= course.material%>">Download the handout</a>
-                </li>
-                <li class="list-group-item">info 3</li>
-            </div> 
-        </div> 
-        <div class="col-md-9">
-            <div class="thumbnail">
-                <img class="img-responsive" src="<%= course.image %>" alt="">
-                <div class="caption-full">
-                    <h4><%= course.name.toUpperCase()%></h4>
-                    <p><%= course.description%></p>
-                    <p>
-                        <em>Submitted by <%= course.author.username%></em> 
-                    </p>
-                    <% if(currentUser && course.author.id.equals(currentUser._id)){ %>
-                        <a class="btn btn-warning" href="/courses/<%= course._id %>/edit ">Edit</a>
-                        <form id="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
-                            <button  class="btn btn-danger">Delete</button>
-                        </form>
-                    <% } %>
-                </div>
-            </div>
-            <div class="well">
-                <% if(currentUser) {%>
-                    <div class="text-right">
-                            <a class="btn btn-success" href="/courses/<%= course._id %>/comments/new">Add New Comment</a>
-                        </div>
-                <% }%>
-                
-                <hr>
-                <% course.comments.forEach(function(comment){ %>
-                    <div class="row"> 
-                        <div class="col-md-12">
-                            <strong><%= comment.author.username %> - <%= comment.author.position %> </strong>
-                            <span class="pull-right"><%= comment.createdAt.toLocaleDateString('en-US') %></span>
-                            <p>
-                                <%= comment.text %>
-                            </p>
-                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
-                            <a class="btn btn-xs btn-warning" href="/courses/<%= course._id %>/comments/<%= comment._id %>/edit">Edit</a>
-                            <form id="delete-form" action="/courses/<%= course._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                <button  class="btn btn-xs btn-danger">Delete</button>
-                            </form>
-                            <% } %>
-                        </div>
-                    </div>
-                    <hr>
-                <% }) %>
-            </div>
-        </div>
-    </div>
-</div> -->
 
+<h2 id="subject" style="text-align: center;"> WELCOME TO <%= course.name.toUpperCase()%> <br> Feel free to ask you
+    questions</h2>
 <div class="parent">
     <div class="aside">
         <br />
@@ -70,13 +13,13 @@
         <div class="content-holder" >
             <div style="" class="content-chat">
                 <div class="chat-panel" >
-                    <h2 id="subject"> TITLE: <%= course.name.toUpperCase()%></h2>
+                    <h2 id="subject" style="text-align: center;"> TITLE: <%= course.name.toUpperCase()%></h2>
                     <hr />
 
                     <div class="chat-item">
                         <% course.comments.forEach(function(comment){ %>
 
-                        <div style="width: 400px">
+                        <div style="width: 170%;">
                             <strong><%= comment.author.username %> - <%= comment.author.position %> </strong>
                             <span><%= comment.createdAt.toLocaleDateString('en-US') %></span>
                             <p style="display: block">
