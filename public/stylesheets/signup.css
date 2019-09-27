@@ -7,6 +7,7 @@
 }
 
 select {
+    opacity: 0;
     background-color: #274970;
     color: white;
     padding: 12px;
