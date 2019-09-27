@@ -2,10 +2,14 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image : url("/Img/Background.png");
+    background-image : url("/images/Background.png");
     background-repeat: no-repeat;
-    background-position: left top;
+  
     background-size: 100vh;
+
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }
 
 * {

@@ -78,3 +78,20 @@ h1 {
     }
    
 }
+
+.edit{
+background-color: green;
+text-decoration: none;
+cursor: pointer;
+padding: 5px;
+ color: white;
+ font-weight: bold;
+}
+.delete{
+     font-weight: bold;
+    color: white;
+    padding: 5px;
+cursor: pointer;
+border: none;
+background-color: red;
+}

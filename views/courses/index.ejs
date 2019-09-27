@@ -82,14 +82,16 @@
                 <td><%= course.description %></td>
                 <td><a href="/courses/<%= course._id %>" class="Download-btn">More Info</a></td>
                 <td><a href="<%= course.material%>" class="Download-btn">Download</a></td>
-                <td>
+               
                     <% if(currentUser && course.author.id.equals(currentUser._id)){ %>
-                    <a class="" href="/courses/<%= course._id %>/edit ">Edit</a>
+                         <td>
+                    <a class="edit" href="/courses/<%= course._id %>/edit ">Edit</a>
                     <form id="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
-                        <button class="">Delete</button>
+                        <button class="delete">Delete</button>
                     </form>
+                     </td>
                     <% } %>
-                </td>
+               
             </tr>
             <% }) %>
     
