@@ -2,10 +2,11 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image : url("/Img/Background.png");
+    background-image : url("../Mini-class\ App\ designs/background.png");
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 100vh;
+    background-position: top top;
+    background-size: cover;
+    height: 100%
 }
 
 * {
@@ -109,6 +110,7 @@ a {
 }
 
 @media screen and (min-width: 1024px){
+   
     .b-img {
         width: 28%;
         position: absolute;
@@ -129,7 +131,9 @@ a {
 
 /* responsive for tablet views */
 @media screen and (max-width: 1024px) and (min-width: 600px) {
-
+     body {
+        background-image: none;
+    }
     .signup {
         width: 100%;
         display: flex;
@@ -203,7 +207,9 @@ a {
 
 /* Responsive for phone views */
 @media screen and (max-width: 599px){
-
+     body {
+        background-image: none;
+    }
     .signup {
         width: 100%;
         display: flex;
