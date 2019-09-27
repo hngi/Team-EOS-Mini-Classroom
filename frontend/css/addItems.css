@@ -155,6 +155,11 @@ h2 {
   .sign-out-btn {
     padding: 5px 30px;
     }
-   
+}
 
+/* Responsive for phone views */
+@media screen and (max-width: 599px){
+    body {
+       background-image: none;
+   }
 }
