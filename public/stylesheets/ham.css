@@ -61,7 +61,8 @@
 .moblie-header-cont {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    padding: 0 20px;
 }
 
 .mobile-nav-header {
@@ -78,3 +79,4 @@
         display: block
     }
 }
+

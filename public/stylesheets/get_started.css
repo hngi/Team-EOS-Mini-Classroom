@@ -276,3 +276,7 @@ a {
         display: none;
     }
 }
+
+.mobile-nav__item >a{
+    color: #274970 !important;
+}
