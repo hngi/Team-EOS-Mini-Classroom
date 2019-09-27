@@ -4,9 +4,7 @@ body{
     padding: 0%;
     background-image : url("/images/Background.png");
     background-repeat: no-repeat;
-  
     background-size: 100vh;
-
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -17,7 +15,7 @@ body{
     font-family: Lato;
 }
 
-.view{
+.view {
     display: flex;
     flex-flow: row;
     width: 100%;
