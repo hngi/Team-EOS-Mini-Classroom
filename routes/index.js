@@ -61,8 +61,10 @@ router.get("/login", function(req, res){
 router.post("/login", passport.authenticate("local", 
 {
     successRedirect: "/courses",
-    failureRedirect: "/login"
+    failureRedirect: "/login",
+    failureFlash: true,
 }), function(req, res){
+    
 });
 
 //LOG OUT ROUTE
