@@ -102,20 +102,30 @@
     </div>
 
     <main class="main-ourse">
+        <% if(currentUser === "student") { %>
         <h1>Welcome to the Courses section <br>Download items</h1>
+        <% }else{ %>
+        <h1>Welcome to the Courses section </h1>
+        <% } %>
+        
         <table id="items" class="main-section">
             <tr>
                 <th>Course</th>
                 <th>Items</th>
                 <th>More Info</th>
+                <% if(currentUser === "teacher") { %>
                 <th>Materials</th>
+                <% } %>
             </tr>
 <% courses.forEach(function(course){ %>
             <tr>
                 <td><%= course.name.toUpperCase() %></td>
                 <td><%= course.description %></td>
                 <td><a href="/courses/<%= course._id %>" class="Download-btn">More Info</a></td>
+                                <% if(currentUser === "student") { %>
                 <td><a href="<%= course.material%>" class="Download-btn">Download</a></td>
+                                <% } %>
+
                
                     <% if(currentUser && course.author.id.equals(currentUser._id)){ %>
                          <td>
