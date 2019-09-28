@@ -108,7 +108,11 @@
                     <div class="p3">
                         <p>The capacity to learn is a gift; the ability to learn is a skill; the willingness to
                             learn is a choice.</p>
+                            <%if(currentUser){%>
+                            <a href="/courses" class="learn-more">Go to Class</a>
+                            <%}else{%>
                         <a href="/getstarted" class="learn-more">Learn More</a>
+                            <%}%>
                     </div>
                 </div>
             </div>
