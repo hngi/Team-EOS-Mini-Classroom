@@ -121,7 +121,7 @@
             <tr>
                 <td><%= course.name.toUpperCase() %></td>
                 <td><%= course.description %></td>
-                <td><a href="/courses/<%= course._id %>" class="Download-btn">More Info</a></td>
+                <td><a href="/courses/<%= course._id %>" class="Download-btn">Go to Class</a></td>
                                 <% if(currentUser === "student") { %>
                 <td><a href="<%= course.material%>" class="Download-btn">Download</a></td>
                                 <% } %>
