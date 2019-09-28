@@ -18,13 +18,24 @@
         <a href="/"> <img src="/images/Logo.svg" class="logo" alt="Logo"></a>
         <nav>
             <ul class="nav__links">
+                
                 <li class="home"><a href="/">Home</a></li>
                 <li class="about"><a href="#">About</a></li>
+                <% if(currentUser) {%>
+                <li class="students"><a href="/courses">Students</a></li>
+                <li class="teachers"><a href="/courses">Teachers</a></li>
+                 <% }else{%>
                 <li class="students"><a href="/register2">Students</a></li>
                 <li class="teachers"><a href="/register">Teachers</a></li>
+
+                     <% } %>
             </ul>
         </nav>
+        <% if(currentUser) {%>
+        <a href="/courses" class="get-started"><button>View Courses</button></a>
+        <% }else{%>
         <a href="/getStarted" class="get-started"><button>Get Started</button></a>
+        <% } %> 
     </header>
     <header class="mobile-nav-header" >
         <div class="moblie-header-cont">
@@ -42,9 +53,14 @@
             <ul class="mobile-nav__items">
                 <li class="home mobile-nav__item"><a href="/courses">Classes</a></li>
                 <li class="about mobile-nav__item"><a href="/about">About</a></li>
+                <% if(!currentUser) {%>
                 <li class="students mobile-nav__item"><a href="/getstarted">Get Started</a></li>
                 <li class="teachers mobile-nav__item"><a href="/getstarted">Teachers</a></li>
-                
+                <% }else{%>
+                <li class="students mobile-nav__item"><a href="/courses">Student</a></li>
+                <li class="teachers mobile-nav__item"><a href="/courses">Teachers</a></li>
+                <% } %>
+
             </ul>
         </nav>
 

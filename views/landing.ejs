@@ -16,7 +16,7 @@
         <img src="/appdesigns/Logo.svg" class="logo desk-nav" alt="Logo" width="15%">
         <nav class="desk-nav">
             <ul class="nav__links">
-                <li class="home"><a href="/">Home</a></li>
+              
                 <li class="about"><a href="/about">About</a></li>
                 <li class="students"><a href="#student">Students</a></li>
                 <li class="teachers"><a href="#teacher">Teachers</a></li>
@@ -57,7 +57,10 @@
 
         <nav class="mobile-nav">
             <ul class="mobile-nav__items">
-                <li class="home mobile-nav__item"><a href="/">Home</a></li>
+                <% if(currentUser){%>
+                <li class="mobile-nav__item"><a href="/courses">Classes</a></li>
+
+                <%}%>
                 <li class="about mobile-nav__item"><a href="/about">About</a></li>
                 <li class="students mobile-nav__item"><a href="#student">Students</a></li>
                 <li class="teachers mobile-nav__item"><a href="#teacher">Teachers</a></li>

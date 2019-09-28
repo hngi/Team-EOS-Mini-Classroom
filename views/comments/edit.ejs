@@ -18,7 +18,9 @@
             <li class="about mobile-nav__item"><a href="/about">About</a></li>
             <li class="students mobile-nav__item"><a href="#student">Students</a></li>
             <li class="teachers mobile-nav__item"><a href="#teacher">Teachers</a></li>
-
+            <% if(currentUser && currentUser.position==="teacher"){ %>
+            <li class="main-nav__item"><a href="/courses/new">Add New Course</a></li>
+            <% } %>
         </ul>
     </nav>
 

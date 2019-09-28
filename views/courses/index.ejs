@@ -19,13 +19,17 @@
     </div>
     <header class="main-header desk-nav">
         <div class="brand-container">
-            <a class="brand-link" href="/courses"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
+            <a class="brand-link" href="/"><img class="brand-image" src="/appdesigns/Logo.svg" class=""
                     alt="Logo"></a>
         </div>
 
         <nav class="main-nav">
 
             <ul class="main-nav__items">
+                 <% if(currentUser){%>
+                 <li class="main-nav__item"><a href="/courses">Classes</a></li>
+
+                 <%}%>
                 <li class="main-nav__item"><a href="/about">About</a></li>
                 <% if(!currentUser){ %>
                 <li class="main-nav__item"><a href="/login">Login</a></li>
@@ -38,18 +42,7 @@
                 <a class="Download-btn" href="/courses/new">Add New Course</a>
                 <% } %>
             </ul>
-            <!-- <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <a class="navbar-brand" href="/"><img src="/appdesigns/Logo.svg" class="logo" alt="Logo"
-                        width="15%"></a>
-            </div> -->
+            
 
 
         </nav>
@@ -69,12 +62,20 @@
 
         <nav class="mobile-nav">
             <ul class="mobile-nav__items">
+                
+                <% if(currentUser){%>
+                <li class="mobile-nav__item"><a href="/courses">Classes</a></li>
+
+                <%}%>
                 <% if(!currentUser){ %>
                 <li class="main-nav__item"><a href="/login">Login</a></li>
                 <li class="main-nav__item"><a href="/getstarted">Sign Up</a></li>
                 <% } else{ %>
                 <li class="main-nav__item">Hello <%= currentUser.username.toUpperCase() %></li>
                 <li class="main-nav__item"><a href="/logout">Logout</a></li>
+                <% } %>
+                <% if(currentUser && currentUser.position==="teacher"){ %>
+                <li class="main-nav__item"><a href="/courses/new">Add New Course</a></li>
                 <% } %>
 
                 <!-- <li class="home mobile-nav__item"><a href="/">Home</a></li>

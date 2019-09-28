@@ -10,7 +10,7 @@ html{
     overflow: hidden;
     display: block;
     height: 0;
-    background: white;
+    /* background: white; */
     transition: height 800ms ease-out;
 }
 
