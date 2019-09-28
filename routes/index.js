@@ -69,7 +69,7 @@ router.post("/login", passport.authenticate("local",
 router.get("/logout", function(req, res){
     req.logOut();
     req.flash("success", "Logged you out")
-    res.redirect("/courses");
+    res.redirect("/");
 });
 
 //about routtrs
