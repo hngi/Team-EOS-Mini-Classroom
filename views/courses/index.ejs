@@ -112,21 +112,21 @@
             <tr>
                 <th>Course</th>
                 <th>Items</th>
-                <th>More Info</th>
-                <% if(currentUser === "teacher") { %>
-                <th>Materials</th>
+                <th>More Info</th> 
+                <% if(currentUser && currentUser.position==="student"){ %>
+                    <th>Materials</th>
                 <% } %>
+                           
             </tr>
-<% courses.forEach(function(course){ %>
+        <% courses.forEach(function(course){ %>
             <tr>
                 <td><%= course.name.toUpperCase() %></td>
                 <td><%= course.description %></td>
                 <td><a href="/courses/<%= course._id %>" class="Download-btn">Go to Class</a></td>
-                                <% if(currentUser === "student") { %>
+                
+                <% if(currentUser && currentUser.position==="student"){ %>
                 <td><a href="<%= course.material%>" class="Download-btn">Download</a></td>
-                                <% } %>
-
-               
+               <% } %>
                     <% if(currentUser && course.author.id.equals(currentUser._id)){ %>
                          <td>
                     <a class="edit" href="/courses/<%= course._id %>/edit ">Edit</a>
