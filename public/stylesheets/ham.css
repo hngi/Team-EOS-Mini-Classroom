@@ -2,6 +2,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 .navbar-brand~img {
     height: 100%
 }
@@ -81,6 +83,22 @@ html{
 
     .mobile-nav-header {
         display: block
+    }
+    body{
+        background-image: none;
+    }
+    .col-md-4 {
+    width: 0;
+    }
+    .mainbody {
+        margin: 0 50px;
+    }
+    .image-right {
+        width: 150%;
+    }
+
+    .main >a > img.logo{
+        display: none;
     }
 }
 
