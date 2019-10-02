@@ -10,14 +10,13 @@
 </div>
 
 # To view the final Build
-- Visit [EosClassroom](https://eosminiclassroom.herokuapp.com/)
+- Visit [EosClassroom](http://eosminiclassroom.000webhostapp.com/)
 - Enjoy
 
 # Installation Guide To run on your local evn 
 
-- You  need `node` installed. You can download form the [Website](https://nodejs.org/en/)
-- You need the `mongodb client` [here](https://www.mongodb.com/download-center/compass) select the required version and os
-- Clone this repository into `any folder`  <br>
+- You  need to have a php server and a mysql database installed. You can download either xampp or wamp server)
+- Clone this repository into the `htdocs folder`  <br>
 
 - **If you have not been added to the organization, kindly work in your forked repository and open a pull request here** <br>
 - Fork the repository and push to your `staging branch`
@@ -33,23 +32,6 @@ git clone https://github.com/hngi/Team-EOS-Mini-Classroom.git
 cd Team-EOS-Mini-Classroom
 ```
 
-- To set the development env database
-```bash
-export CLASSROOMDATABASEURL=mongodb://localhost:27017/classroom
-```
-
-```bash
-npm install
-```
-
-```bash
-node app.js
-```
-
-```bash
-Visit localhost:3000 in your browser
-```
-
 # Contribution Guide
 
 ```bash
@@ -63,9 +45,9 @@ The template for your profile page can be found here
 - Create a new line with this markup and with your slack username like so, e.g
 `
 "slack username":{
-        "fullname": "ibebgugwu chukwuemeka",
+        "fullname": "Asifat Kazeem Adeniyi",
         "stack": "Backend",
-        "skills": "JavaScript, Nodejs"
+        "skills": "PHP"
     },
     `
     
