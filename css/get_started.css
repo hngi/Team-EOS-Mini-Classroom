@@ -1,0 +1,282 @@
+/* for desktop views */
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image : url("/images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+.view {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    padding: 0 10%;
+    width: auto;
+}
+
+.logo {
+    width: 11%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.learning {
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #274970
+}
+
+.signup {
+    width: 70%;
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+}
+
+hr {
+    background: black;
+    width: 1px;
+}
+
+.teacher, .student{
+    width: 47.5%;
+    padding: 3%;
+}
+
+.teacher {
+    text-align: right;
+}
+
+.t-text {
+    font-size: 34px;
+    color: #274970;
+    line-height: 43px;
+    padding: 1%;
+}
+
+.s-text, .s-text-s {
+    font-size: 22px;
+    color: #274970;
+    line-height: 29px;
+    padding: 1%;
+}
+.s-text-s {
+    margin-bottom: 23px;
+}
+span {
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 29px; 
+    padding: 2%;
+    
+}
+
+.submit{
+    padding: 7px 10%;
+    background: #274970;
+    border-radius: 75px;
+    font-size: 20px;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.teacher .submit {
+    float: right;
+}
+
+.student .submit {
+    float: left;
+}
+
+@media screen and (min-width: 1024px){
+    .b-img {
+        width: 28%;
+        position: absolute;
+        right: 0%;
+        bottom: 0%
+    }
+
+    .x {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width: 3%;
+    }
+
+}
+
+
+
+/* responsive for tablet views */
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+
+    .signup {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        margin: auto;
+    }
+
+    hr {
+        background: black;
+        width: 100%;
+    }
+
+    .teacher,
+    .student {
+        width: 100%;
+        padding: 3%;
+        text-align: center;
+    }
+
+    .t-text {
+        font-size: 36px;
+        color: #274970;
+        line-height: 43px;
+        padding: 1%;
+    }
+
+    .s-text {
+        font-size: 24px;
+        color: #274970;
+        line-height: 29px;
+        padding: 1%;
+    }
+
+    span {
+        visibility: collapse;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 2%;
+
+    }
+    .logo {
+        width: 25%;
+    }
+
+    .submit {
+        width: 100%;
+        height: 10%;
+        background: #274970;
+        border-radius: 75px;
+        text-align: center;
+        margin: 5% 0;
+    }
+
+
+    .b-img {
+        width: 40%;
+        display: none;
+    }
+
+    .x {
+        position: absolute;
+        right: 0%;
+        display: none;
+    }
+}
+
+/* Responsive for phone views */
+@media screen and (max-width: 599px){
+
+    .signup {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        margin: auto;
+    }
+
+    hr {
+        background: black;
+        width: 100%;
+    }
+
+    .teacher,
+    .student {
+        width: 100%;
+        padding: 3%;
+        text-align: center;
+    }
+
+    .t-text {
+        font-size: 36px;
+        color: #274970;
+        line-height: 43px;
+        padding: 1%;
+    }
+     .logo {
+        width: 25%;
+    }
+
+
+    .s-text {
+        font-size: 24px;
+        color: #274970;
+        line-height: 29px;
+        padding: 1%;
+    }
+
+    span {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 2%;
+
+    }
+
+    .submit {
+        width: 100%;
+        height: 10%;
+        background: #274970;
+        border-radius: 75px;
+        text-align: center;
+        margin: 5% 0;
+    }
+
+
+    .b-img {
+        width: 100%;
+    }
+
+    .x {
+        position: absolute;
+        right: 0%;
+        display: none;
+    }
+}
+
+.mobile-nav__item >a{
+    color: #274970 !important;
+}

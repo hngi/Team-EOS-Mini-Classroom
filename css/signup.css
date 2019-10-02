@@ -1,0 +1,72 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: url(background.png);
+    font-family: lato;
+}
+
+select {
+    opacity: 0;
+    background-color: #274970;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    /* -webkit-appearance: button;*/
+    appearance: none; 
+    /* background-position: 75px center;
+    padding-left: 10px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC') !important;
+    background-repeat: no-repeat; */
+    outline: none;
+}
+
+
+.register-header {
+    font-size: 36px;
+    font-weight: 70px;
+
+}
+
+/* img {
+    width: 200px;
+    height: 200px;
+} */
+
+input {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-color: #989898;
+}
+
+input:focus {
+    outline: none;
+}
+
+button.signupbtn {
+
+    width: 290px;
+    height: 50px;
+    border-radius: 75px;
+    background-color: #274970;
+    color: white;
+    font-size: 24px;
+}
+
+button.signupbtn:hover {
+    background-color: #5198e9;
+}
+
+p > a {
+    color: green;
+}

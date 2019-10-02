@@ -1,0 +1,86 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar-brand~img {
+    height: 100%
+}
+
+.mobile-nav {
+    overflow: hidden;
+    display: block;
+    height: 0;
+    /* background: white; */
+    transition: height 800ms ease-out;
+}
+
+.open {
+    display: block;
+    height: 159px;
+}
+
+.mobile-nav__items {
+    width: 100%;
+    list-style: none;
+}
+
+
+
+.mobile-nav__item a {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toggle-button {
+    width: 3rem;
+    /* background: rgba(6, 134, 89, 0.603); */
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+    display: none;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+
+@media (max-width: 66.5rem) {
+
+    .toggle-button {
+        display: block;
+    }
+}
+
+.moblie-header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.mobile-nav-header {
+    display: none;
+}
+
+@media (max-width: 500px) {
+
+    .desk-nav {
+        display: none;
+    }
+
+    .mobile-nav-header {
+        display: block
+    }
+}
+
