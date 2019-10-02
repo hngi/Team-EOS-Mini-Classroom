@@ -1,4 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+  
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+  }
+  li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #274970;
+  text-decoration: none;
+}
 
+.logo {
+  width: 10%;
+  margin-right: auto;
+  margin-left: 80px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 5%;
+}
+
+.nav__links {
+  list-style-type: none;
+
+}
      .picture{
         display: flex;
         position: absolute;
@@ -6,36 +43,9 @@
         height: 692.31px;
         left: 65%;
         top: 15%;
-        
-        background: url(21425.jpg)
-        }
-        .logo{
-            display: flex;
-            position:absolute;
-            left: 43.06%;
-            right: 43.06%;
-            top: 0%;
-            bottom: 80.47%;
-            height: 120px;
-            width: 120px;
-            }
-            .Ellipse2{
-            display: flex;
-            position: absolute;
-            left: 94.51%;
-            right: -1.46%;
-            top: -2.45%;
-            bottom: 92.69%;
-        
-                }
-            .x{
-                display: flex;
-                position: absolute;
-                left: 96.53%;
-                right: -3.47%;
-                top: 88.28%;
-                bottom: 1.96%;
-            }    
+     }
+   
+              
             h1{
             display:flex;
             position: absolute;
@@ -53,6 +63,12 @@
             color: #274970;
             
             }
+            header {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 15px 5%;
+              }
            
             .email{
             display: flex;
@@ -90,15 +106,7 @@
             flex-direction: column;
             
             }
-            .checkbox{
-            display: flex;
-            position: absolute;
-            justify-content: center;
-            width: 195px;
-            height: 22px;
-            left: 40%;
-            top: 75%;
-            }
+         
             p{
             display: flex;
             position: absolute;
@@ -133,19 +141,7 @@
                 
             
             }
-            .col-md-4{
-    
-                
-                position: absolute;
-                width: 50px;
-                height: 120%;
-                left: 0.71px;
-                top: 0px;
-                
-                background: #C63305;
-                transform: rotate(0.27deg);
-    
-            }
+            
             .container{
                 width: 100%;
             }
