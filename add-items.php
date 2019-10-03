@@ -107,7 +107,7 @@
 
                             <!-- select file to add to class -->
                             <div style="margin-top: 15px;">
-                                <input type="file" name="classFile" class="select-item" accept=".pdf, .doc, .ppt" required>
+                                <input type="file" name="classFile" class="select-item" accept=".pdf, .doc, .ppt, .txt" required>
                             </div>
 
                             <div class="btn">
