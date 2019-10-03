@@ -19,17 +19,17 @@
           <h1>Reset Password</h1><br>
           <form action="" method="post">
               <div class="text-box">
-                  <input class="email" name="email" placeholder="Email Address">
+                  <input class="email" name="email" placeholder="Email Address" required>
               </div>
               <div class="text-box">
-                  <input class="Password" name="password" placeholder="New Password">
+                  <input class="Password" name="password" placeholder="New Password" required>
               </div>
               <button type="submit" name="submit" class="button" style="color: #fff;">Reset Password</button>
           </form>
     
            <br>
           <div class="footer">
-            <p>Have you remebered you password? <a href="teacher-login.php" style="color: #274970; text-decoration: none; font-weight: bold;">Log in</a></p><br>
+            <p>Have you remebered your password? <a href="student-login.php" style="color: #274970; text-decoration: none; font-weight: bold;">Log in</a></p><br>
         
           </div>        
         </div>
