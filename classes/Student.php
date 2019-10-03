@@ -98,5 +98,10 @@
 				}
 			}
 		}
+
+		// Password reset
+		public function resetPassword($data) {
+			# code...
+		}
 	}
 ?>

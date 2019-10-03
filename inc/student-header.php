@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/svg"
         sizes="16x16">
-    <title>Students/title>
+    <title>Students</title>
 
     <link rel="stylesheet" href="css/main.css">
     <!-- login css-->
