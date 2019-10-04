@@ -6,9 +6,6 @@
     margin: 0;
 }
 body {
-    background-image: url("/images/background.png");
-    background-size: cover;
-    height: 100%;
     font-family: 'Lato', sans-serif;
 }
 li, a, button {
@@ -67,7 +64,7 @@ button:focus {
   
 }
 .mainbody{
-  margin-left: 10rem;
+  margin-left: 5rem;
   margin-top: 100px;
   color: #274970;
   font-size: 23px;
@@ -80,27 +77,19 @@ button:focus {
     body {
     background-color: #fff;
     height: 100vh;
-}
-    .logo {
-  width: 23%;
   }
-  .nav__links li{
-  display: flex;
-  padding: 10px 20px;
-  
-}
-button {
-  margin-left: 5px;
-    padding: 5px 45px;
-}
-.mainbody{
-  margin-left: 5rem;
-  margin-top: 80px;
-  text-align: center;
-	
-}
-button {
-    padding: 3px 50px;
-    font-size: 15px
-}
+      .logo {
+    width: 23%;
+    }
+    .nav__links li{
+    display: flex;
+    padding: 10px 20px;
+    
+  }
+  .mainbody{
+    margin-left: .1rem;
+    margin-top: 80px;
+    text-align: center;
+    
+  }
 }

@@ -22,6 +22,7 @@ html{
 .mobile-nav__items {
     width: 100%;
     list-style: none;
+    margin-left: 2rem;
 }
 
 

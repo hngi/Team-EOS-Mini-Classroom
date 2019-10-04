@@ -25,6 +25,7 @@ li, a {
     font-size: 20px;
     margin-left: 3rem;
 }
+
 header {
   display: flex;
   justify-content: flex-end;
@@ -206,7 +207,6 @@ button:hover {
        margin-top: 5rem;
        padding-top: 30px;
        height: 140px; 
-       transition: height 800ms ease-out;
        
     }
     .Navbar__Link-toggle {
