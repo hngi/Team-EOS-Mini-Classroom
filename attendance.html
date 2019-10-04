@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="attendance-style.css">
+	<title>Attendance-Page</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<div class="attendance-topic">
+					<img src="images/logo.png" class="logo" alt="mathisi">
+					<span class="text">Students Attendance Here</span>
+				</div>
+			</div>
+
+		<div class="col-md-6 col-xs-6 col-sm-6">
+			<div class="students">
+				<p class="registered">All registered Students</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Student Names</th>
+							<th scope="col"> Email</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Adeleke Iyanu Grace</td>
+							<td>miracleg1127@gmail.com</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Kazeem Asifat</td>
+							<td>kazeemas27@gmail.com</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Adeniyi Mayowa</td>
+							<td>ademi1980@gmail.com</td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>Ogunlaja Oreoluwa</td>
+							<td>ore-cathy@yahoo.com</td>
+						</tr>
+						<tr>
+							<th scope="row">5</th>
+							<td>Adeola Asifat</td>
+							<td>kazeemade99@gmail.com</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-xs-6 col-sm-6">
+			<div class="dates">
+				<p class="registered-dates"> Date registered</p>
+					<input type="date" id="datepicker">
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$( "#date").datepicker();
+		});
+	</script>
+</body>
+</html>
