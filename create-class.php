@@ -1,5 +1,23 @@
 <?php include 'teachers-dashboard-header.php'; ?>
+<div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+        <em>Enable dark mode!</em>
+    </div>
+<script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
 
+        toggle.addEventListener('input', e => {
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+        body.classList.add('dark-theme');
+             } else {
+         body.classList.remove('dark-theme');
+         }
+          });
+      </script>
       <h4>Create New Class</h4>
       
       <br><br>

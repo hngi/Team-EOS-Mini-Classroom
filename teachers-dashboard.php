@@ -12,6 +12,25 @@
               echo $addAnnouncement;
           }
       ?>
+      <div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+        <em>Enable dark mode!</em>
+    </div>
+      <script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+
+        toggle.addEventListener('input', e => {
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+        body.classList.add('dark-theme');
+             } else {
+         body.classList.remove('dark-theme');
+         }
+          });
+      </script>
       <form role="form" action="" method="post">
         <div class="form-group">
           <input class="form-control" required placeholder="Title" name="title"></input>
