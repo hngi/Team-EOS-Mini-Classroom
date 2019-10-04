@@ -25,7 +25,7 @@ signupForm.addEventListener('submit', (e) => {
     
     if (messages.length > 0) {
         e.preventDefault()
-        errorElement.innerText = messages.join(', ')
+        errorElement.innerHTML = messages.join(', ')
 
     }
     
