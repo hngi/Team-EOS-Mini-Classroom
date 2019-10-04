@@ -196,7 +196,7 @@ button:hover {
     }
     .support-btn {
     font-size: 20px;
-    margin-left: 3rem;
+    margin-left: 1rem;
     }
     .nav__links {
        display: none;
@@ -205,7 +205,7 @@ button:hover {
        align-items: center;
        margin-top: 5rem;
        padding-top: 30px;
-       height: 120px; 
+       height: 140px; 
        transition: height 800ms ease-out;
        
     }
@@ -277,5 +277,11 @@ button:hover {
     .show-more {
     font-size: 20px;
     margin-top: 2px;
+    }
+    .logo {
+      width: 60%;
+    }
+    .sign-up {
+      margin-bottom: 20px;
     }
 }
