@@ -3,8 +3,7 @@ var mobileNav = document.querySelector(".mobile-nav");
 
 
 
-// Look for .hamburger
-var hamburger = document.querySelector(".hamburger");
+
 // On click
 toggleButton.addEventListener("click", function () {
     // Toggle class "is-active"

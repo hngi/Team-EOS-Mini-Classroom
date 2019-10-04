@@ -6,10 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="https://res.cloudinary.com/dexcjehc5/image/upload/v1569397404/Logo" type="image/png">
     <link rel="stylesheet" type="text/css" href="css/about.css">
-    <link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" type="text/css" href="css/ham.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 	<title>About Maithisi</title>
-	
+    <style>
+    .container-fluid {
+    background-color: #274970;
+    margin-top: 15rem;
+    width: 100%;
+    }
+    .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    }
+    .footer-icons {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-left: 20px;
+    }
+    .footer-text, .fab {
+    color: #fff;
+    }
+    .footer-icons:hover {
+    cursor: pointer;
+    }
+    .footer-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .footer-image {
+    display: flex;
+    justify-content: center;
+    }
+    .nav-link li {
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 3rem;
+    }
+
+    @media screen and (max-width:768px) {
+        .container-fluid {
+        margin-top: 5rem;
+        }
+        .footer-icons {
+        padding: 15px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin-left: 20px;
+        }
+        .education, .std-plat, .teacher {
+        color: #274970;
+        font-size: 30px;
+        }
+        .classroom, .access, .send{
+        font-size: 25px;
+        font-weight: 500;
+        }
+        .show-more {
+        font-size: 20px;
+        margin-top: 2px;
+        }
+        .nav-link{
+            display: none;
+        }
+    }
+    </style>
 </head>
 <body>
   <header  class="desk-nav">
@@ -23,7 +91,7 @@
                 <li class="teachers"><a href="teacher-login.php">Teachers</a></li>
             </ul>
         </nav>
-        <a href="getStarted.html" class="get-started"><button>Get Started</button></a>
+        <!-- <a href="getStarted.html" class="get-started"><button>Get Started</button></a> -->
     </header>   
     <!-- Mobile nav bar  -->
     <header class="mobile-nav-header" >
@@ -32,22 +100,22 @@
 
         <button class="toggle-button">
             <span class="toggle-button__bar " style="width: 30px;
-    /* height: 1.2rem; */
+    /* height: 1rem; */
     background: white;
     display: block;
-    margin: 1rem -1rem;
-    padding: 2px;"></span>
+    margin: .5rem -1rem;
+    padding: 1px;"></span>
             <span class="toggle-button__bar " style="width: 30px;
-    /* height: 1.2rem; */
+    /* height: 1rem; */
     background: white;
     display: block;
-    margin: 1rem -1rem;
-    padding: 2px;"></span>
+    margin: .5rem -1rem;
+    padding: 1px;"></span>
             <span class="toggle-button__bar " style="width: 30px;
-    /* height: 1.2rem; */
+    /* height: 1rem; */
     background: white;
     display: block;
-    margin: 1rem -1rem;
+    margin: .5rem -1rem;
     padding: 2px;"></span>
         </button>
         </div>
@@ -77,8 +145,33 @@
         <br>Further Mathematics
         <br> Biology
         <br> Economics 
-		</div>
-         
+        </div>
+        <!-- footer section -->
+        <div class="container-fluid">
+            <div class="footer">
+                <div class="footer-image">
+                    <a href="index.html"><img src="Mini-class App designs/mathisi logo while.svg" alt=""></a>
+                </div>
+                <div class="social-icons">
+                    <a href="" class="footer-icons"><i class="fab fa-twitter"
+                            style="width: 20px; height: 17px;"></i></a>
+                    <a href="" class="footer-icons"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="" class="footer-icons"><i class="fab fa-instagram"
+                            style="width: 20px; height: 17px;"></i></a>
+                    <a href="" class="footer-icons"><i class="fab fa-facebook"
+                            style="width: 20px; height: 17px;"></i></a>
+                </div>
+                <div class="footer-information">
+                    <ul class="nav-link">
+                        <li><a href="index.html" class="footer-text">Home</a></li>
+                        <li><a href="" class="footer-text">Contact Us</a></li>
+                        <li><a href="" class="footer-text">Privacy Policy</a></li>
+                        <li><a href="review.html" class="footer-text">Feedback and Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     <script src="js/main.js"></script>       
 </body>
 </html>

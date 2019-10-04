@@ -25,6 +25,7 @@ li, a {
     font-size: 20px;
     margin-left: 3rem;
 }
+
 header {
   display: flex;
   justify-content: flex-end;
@@ -102,6 +103,10 @@ header {
     color: #274970;
     font-size: 30px;
 }
+.education-1 {
+   color: #274970;
+    font-size: 25px;
+}
 .classroom, .access, .send{
     font-size: 20px;
     font-weight: 500;
@@ -136,6 +141,9 @@ button {
 }
 .learn-more:last-child {
     margin-left: 20px;
+}
+button {
+  margin-top: 30px;
 }
 button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -189,7 +197,7 @@ button:hover {
     }
     .support-btn {
     font-size: 20px;
-    margin-left: 3rem;
+    margin-left: 1rem;
     }
     .nav__links {
        display: none;
@@ -198,8 +206,7 @@ button:hover {
        align-items: center;
        margin-top: 5rem;
        padding-top: 30px;
-       height: 120px; 
-       transition: height 800ms ease-out;
+       height: 140px; 
        
     }
     .Navbar__Link-toggle {
@@ -261,14 +268,20 @@ button:hover {
     }
     .education, .std-plat, .teacher {
         color: #274970;
-        font-size: 30px;
+        font-size: 25px;
     }
     .classroom, .access, .send{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
     }
     .show-more {
     font-size: 20px;
     margin-top: 2px;
+    }
+    .logo {
+      width: 60%;
+    }
+    .education-1 {
+      font-size: 20px;
     }
 }
