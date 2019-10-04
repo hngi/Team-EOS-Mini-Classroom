@@ -7,12 +7,6 @@ body{
     color: #113f67;
 }
 
-.contact-section{
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
 input[type = text],
 input[type = email],
 textarea {
@@ -57,12 +51,20 @@ input[type = submit]{
         justify-content: center;
     }
 
+    .contact-section{
+        height: 100%;
+        width: 75%;
+        display: flex;
+        justify-content: space-around;
+        background: #f3f9fb;
+    }
+
     .contact-form-container{
-        width: 90%;
+        width: 70%;
         height: auto;
         margin: auto 5%;
         border: 0.5px solid #113f67 ;
-        padding: 10px;
+        padding: 30px;
     }
 }
 
@@ -76,17 +78,20 @@ input[type = submit]{
 
     .sidebar{
         width: 100%;
-        height: 20%;
+        height: 25%;
         background: #113f67;
         color: #ffffff;
         display: flex;
         flex-flow: column;
         justify-content: center;
-    } 
-
+    }
+    
     .contact-section{
+        height: 75%;
         width: 100%;
-        height: 80%;
+        display: flex;
+        justify-content: space-around;
+        background: #f3f9fb;
     }
 
     .contact-form-container{
