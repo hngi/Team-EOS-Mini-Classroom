@@ -1,0 +1,72 @@
+* {
+   }
+body {
+    
+}
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+       
+       
+    }
+    .sucess-message{
+        display: none;
+    }
+    .logo{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        background-color: #274970;
+        color: white;
+       
+    }
+    img {
+        max-width: 100%;
+        border-style: none;
+        height: 50px;
+        width: 50px; 
+        vertical-align: middle;
+         }
+    .form-container{
+             display: flex;
+             justify-content: center;
+             flex: 1;
+             background-color: #F3F9FB;
+            
+             padding: 50px;
+           
+         }
+    .details, .review{
+             padding: 20px;
+         }
+    .input{
+             margin: 10px;
+         }
+    .comments{
+             padding-left: 80px;
+    }
+    .btn {
+             border-radius: 75px;
+             border-style: none;
+             background-color: #274970;
+             color: white;
+             padding: 10px;
+             margin-top: 10px;
+             cursor: pointer;
+        }
+            
+           
+
+              @media (max-width: 576px) {
+                  
+                .logo {
+                 display: none; }
+                 
+                 
+                .form-container{
+                 
+                 padding: 0px;
+                
+                }
+                } 

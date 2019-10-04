@@ -37,6 +37,17 @@
 			}
 		}
 
+		// Select Data or Read Dataand return total row
+		public function get_total_rows($query){
+			$result = $this->link->query($query) or die($this->link->error.__LINE__);
+			if ($result->num_rows > 0) {
+				return $result->num_rows;
+			}
+			else {
+				return false;
+			}
+		}
+
 		// Insert Data
 		public function insert($query){
 			$insert_row = $this->link->query($query) or die($this->link->error.__LINE__);

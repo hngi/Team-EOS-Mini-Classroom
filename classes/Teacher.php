@@ -90,7 +90,8 @@
 					Session::set("teacherLogin", true);
 					Session::set("teacherId", $value['id']);
 					Session::set("teacherName", $value['name']);
-					header("Location: create-class.php");
+					echo "<script>window.location = 'teachers-dashboard.php'; </script>";
+					//header("Location: teachers-dashboard.php");
 				}
 				else {
 					$loginmsg = "<div class='alert-danger' role='alert'>Email or Password Incorrect!</div>";
