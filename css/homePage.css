@@ -196,7 +196,7 @@ button:hover {
     }
     .support-btn {
     font-size: 20px;
-    margin-left: 3rem;
+    margin-left: 1rem;
     }
     .nav__links {
        display: none;
@@ -205,7 +205,7 @@ button:hover {
        align-items: center;
        margin-top: 5rem;
        padding-top: 30px;
-       height: 120px; 
+       height: 140px; 
        transition: height 800ms ease-out;
        
     }
@@ -268,14 +268,20 @@ button:hover {
     }
     .education, .std-plat, .teacher {
         color: #274970;
-        font-size: 30px;
+        font-size: 25px;
     }
     .classroom, .access, .send{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
     }
     .show-more {
     font-size: 20px;
     margin-top: 2px;
+    }
+    .logo {
+      width: 60%;
+    }
+    .education-1 {
+      font-size: 20px;
     }
 }
