@@ -93,3 +93,11 @@ button:focus {
     
   }
 }
+
+.nav{
+  overflow: hidden;
+  display: block;
+  height: 0;
+  /* background: white; */
+  transition: height 800ms ease-out;
+}

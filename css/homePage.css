@@ -285,3 +285,16 @@ button:hover {
       font-size: 20px;
     }
 }
+
+@media(max-width: 770px){
+  .nav {
+    height: 10px;
+    overflow-y: hidden;
+    transition: height 0.4s linear;
+  }
+}
+
+
+.open {
+  height: 220px;
+}
