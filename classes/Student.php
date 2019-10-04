@@ -52,7 +52,7 @@
 
 		  		// if data is inserted
 				if ($inserted_row){
-					$msg = "<div class='success'>Registration Successful! Please click the Log In below to sign in!</div>";
+					$msg = "<div class='alert-success' role='alert'>Registration Successful! Please click the Log In below to sign in!</div>";
 					return $msg;
 				}
 				else {
@@ -101,7 +101,34 @@
 
 		// Password reset
 		public function resetPassword($data) {
-			# code...
+			$email = $this->fm->validation($data['email']);
+			$password = $this->fm->validation($data['password']);
+
+			$cleanEmail = mysqli_real_escape_string($this->db->link, $email);
+			$cleanPassword = mysqli_real_escape_string($this->db->link, $password);
+
+			// check for wrong email format
+			if (!filter_var($cleanEmail, FILTER_VALIDATE_EMAIL)){
+				$signupMsg = "<div class='alert-danger' role='alert'>Invalid Email!</div>";
+				return $signupMsg;
+			} else {
+				// check if mail exists
+				$checkEmail = "SELECT * FROM tbl_student WHERE email = '$cleanEmail' LIMIT 1";
+				$mailChk = $this->db->select($checkEmail);
+
+				// if mail is found, reset the password in the database
+				if ($mailChk != false) {
+					$updatePassword = "UPDATE tbl_student SET password = '$cleanPassword' WHERE email = '$cleanEmail'";
+					$update = $this->db->update($updatePassword);
+					if ($update) {
+						$msg = "<div class='alert-success' role='alert'>Password changed successfully! You may sign in into your account with your new password.</div>";
+						return $msg;
+					}
+				} else {
+					$msg = "<div class='alert-danger' role='alert'>Email Does Not Exist.</div>";
+					return $msg;
+				}
+			}
 		}
 	}
 ?>

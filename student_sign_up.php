@@ -32,6 +32,9 @@
                 <label for="psw"></label>
                 <input type="password" placeholder="password" name="password" required><br>
                 <button type="submit" name="submit" class="signupbtn">Sign Up</button>
+                <div class="terms">
+                  <input type="checkbox" name="" required> I agree to the <a href="terms.html">Terms and Conditions</a>
+                </div>
             </form>
               
               

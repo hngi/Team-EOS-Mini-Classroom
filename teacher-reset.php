@@ -1,10 +1,10 @@
 <?php 
-  include 'inc/student-header.php';
+  include 'inc/teacher-header.php';
 ?>
     <div class="">
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
-                $resetPassword = $student->resetPassword($_POST);
+                $resetPassword = $teacher->resetPassword($_POST);
             }
           ?>
           
@@ -29,7 +29,7 @@
     
            <br>
           <div class="footer">
-            <p>Have you remebered your password? <a href="student-login.php" style="color: #274970; text-decoration: none; font-weight: bold;">Log in</a></p><br>
+            <p>Have you remebered your password? <a href="teacher-login.php" style="color: #274970; text-decoration: none; font-weight: bold;">Log in</a></p><br>
         
           </div>        
         </div>
