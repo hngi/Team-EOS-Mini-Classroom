@@ -268,10 +268,10 @@ button:hover {
     }
     .education, .std-plat, .teacher {
         color: #274970;
-        font-size: 30px;
+        font-size: 25px;
     }
     .classroom, .access, .send{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
     }
     .show-more {
@@ -281,7 +281,7 @@ button:hover {
     .logo {
       width: 60%;
     }
-    .sign-up {
-      margin-bottom: 20px;
+    .education-1 {
+      font-size: 20px;
     }
 }
