@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+    
+
+body{
+    
+    font-family: 'Lato', sans-serif; 
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1px 10%;
+    box-shadow: 0px 1px 10px #999;  
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    top: 0;
+  }
+
+.content{
+    margin-right: 6%;
+    margin-left: 10%; 
+    padding-top: 5%;
+    margin-top: 5%;
+}
+
+.question{
+    color: #274970;
+}
+
+.answer{
+    padding-left: 2em;
+}
+.content li {
+    list-style-type:  none;
+    padding-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #274970;
+}
+
+h1 {
+    color: #274970;
+}
+
+.topHead {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+} 
+
+  
+
+.topnav li{
+        display: inline-block;
+        padding: 0 20px;
+      
+ }
+
+ .topnav li a {
+    transition: all 0.3s ease 0s;
+    font-size: 19px;
+ }
+
+ 
+ 
+ 
+
+
+ .container-fluid {
+    background-color: #274970;
+    margin-top: 6rem;
+    width: 100%;
+
+}
+ .social_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.footer_icons {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.footer_text, .fab {
+     color: #fff;
+}
+.footer-icons:hover {
+    cursor: pointer;
+}
+.footer_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-image {
+    display: flex;
+    justify-content: center;
+}
+.nav_link li {
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width:768px) {
+    html{
+        scroll-behavior: smooth;
+    }
+
+    .topnav {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 0;
+        height: 80px; 
+        font-weight: 0.1rem!important;
+     }
+
+   
+
+     #logo{
+         
+         width: 70%;
+     }
+
+     #footerlogo{
+         
+        width: 60%;
+    }
+
+     main {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        }
+
+        .container-fluid {
+            background-color: #274970;
+            margin-top: 10rem;
+            width: 100%;
+        
+        }
+
+        h1 {
+            color: #274970;
+            font-size: 0.8rem;
+        }
+}
