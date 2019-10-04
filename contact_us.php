@@ -12,7 +12,7 @@
 <body>
     <main class="view">
         <div class="sidebar">
-            <img src="/mathisi logo white.png" alt="Mathisi">
+            <img src="images/Logo.svg" alt="Mathisi">
         </div>
 
         <div class="contact-section">
