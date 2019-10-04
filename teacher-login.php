@@ -32,7 +32,7 @@
            <br>
           <div class="footer">
             <p>Don't have an account ?<a href="teacher_sign_up.php" style="color: #274970; text-decoration: none; font-weight: bold;"> Sign Up</a></p><br>
-            <p><a href="reset.php" style="color: #274970; text-decoration: none; font-weight: bold;">Forgotten Password</a></p>
+            <p><a href="teacher-reset.php" style="color: #274970; text-decoration: none; font-weight: bold;">Forgotten Password</a></p>
           </div>        
         </div>
         <div class="picture-cont" >
