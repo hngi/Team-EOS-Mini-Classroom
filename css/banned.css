@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns:2fr 4fr;
+}
+
+.sidebar{
+	background-color: #113F67;
+	color: #ffffff;
+	height: 100vh;
+	display: grid;
+	grid-template-rows:2fr 4fr;
+}
+.TechieTeelogo{
+	padding-left: 20px;
+	padding-top: 25px;
+	font-size: 22px;
+	
+}
+
+.SD {
+  margin-left: auto;
+  margin-top: 10px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 2.0em;
+  color: #000000;
+}
+
+.name-tag{
+	margin-left: auto;
+	margin-right: 15px;
+	margin-top: -10px;
+  text-align: right;
+  font-weight: 100;
+  font-size: 1.2em;
+  color: #ffffff;
+
+
+}
+.list{
+
+	padding-top: 40px;
+	padding-left: 10%;
+
+}
+
+.content{background-color: #ffffff;
+	height: 100vh;
+
+}
+a { 
+	text-decoration: none;
+	 }
+ul > li { 
+	padding: 20px;
+	list-style-type: none;
+
+	 }
+ul > li > ul {
+ display:none; 
+}
+ul > li:hover > ul {
+ display:block;
+  }
+
+ul > li > ul { padding-left:10px; }
+
+a:active {
+  background-color: #ffffff;
+  color: #113F67;
+}
+
+button {
+    background: #113F67;
+    min-width: 20%;
+    padding:   ;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    display: block;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    color: #FFF;
+    margin: 1.3rem 0;
+    
+}
+
+button:hover {
+    background: #ffffff;
+    transition: background .8s ease-in-out;
+    -webkit-transition: background .8s ease-in-out;
+    color: rgb(3, 109, 248);
+    line-height: 2.5rem;
+}

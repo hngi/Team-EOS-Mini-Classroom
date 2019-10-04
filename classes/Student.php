@@ -99,6 +99,13 @@
 			}
 		}
 
+		// Get all students
+		public function selectAllStudents(){
+			$query = "SELECT * FROM tbl_student";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
 		// Password reset
 		public function resetPassword($data) {
 			$email = $this->fm->validation($data['email']);
@@ -129,6 +136,96 @@
 					return $msg;
 				}
 			}
+		}
+
+		// ban student
+		public function banStudent($data) {
+			$id = $this->fm->validation($data);
+
+			$studentId = mysqli_real_escape_string($this->db->link, $id);
+
+			$banStudent = "UPDATE tbl_student SET status = '1' WHERE id = '$studentId'";
+
+			$updateBan = $this->db->update($banStudent);
+			// if query is successful
+			if ($updateBan) {
+				$msg = "<div class='alert alert-danger' role='alert'>This student has been banned successfully!.</div>";
+				return $msg;
+			} else {
+				$msg = "<div class='alert-danger' role='alert'>Student not banned yet, please try again!</div>";
+				return $msg;
+			}
+		}
+
+		// pardon student
+		public function pardonStudent($data) {
+			$id = $this->fm->validation($data);
+
+			$studentId = mysqli_real_escape_string($this->db->link, $id);
+
+			$pardonStudent = "UPDATE tbl_student SET status = '0' WHERE id = '$studentId'";
+
+			$updatePardon = $this->db->update($pardonStudent);
+			// if query is successful
+			if ($updatePardon) {
+				$msg = "<div class='alert alert-success' role='alert'>This student has been pardoned successfully!.</div>";
+				return $msg;
+			} else {
+				$msg = "<div class='alert-danger' role='alert'>Student not pardoned yet, please try again.</div>";
+				return $msg;
+			}
+		}
+
+		// Expell Student
+		public function expellStudent($data) {
+			$id = $this->fm->validation($data);
+
+			$studentId = mysqli_real_escape_string($this->db->link, $id);
+			
+			$expellStudent = "DELETE FROM tbl_student WHERE id = '$studentId'";
+			$expellResult = $this->db->delete($expellStudent);
+			// if query is successful
+			if ($expellResult) {
+				$msg = "<div class='alert alert-danger' role='alert'>This student has been Expelled successfully!.</div>";
+				return $msg;
+			}
+			else {
+				$msg = "<div class='alert-danger' role='alert'>Student not expelled yet, please try again.</div>";
+				return $msg;
+			}
+		}
+
+		// Review page
+		public function submitReview($data) {
+			$name = $this->fm->validation($data['name']);
+			$email = $this->fm->validation($data['email']);
+			$referrer = $this->fm->validation($data['referrer']);
+			//$rating = $this->fm->validation($data['rating']);
+			$comment = $this->fm->validation($data['comment']);
+
+			if (empty($name) || empty($email) || empty($referrer) || empty($comment)) {
+                $msg = "<div style='color: red; font-weight: bold; text-align: center;'>Please select all fields</div>";
+                return $msg;
+            } else {
+            	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+					$signupMsg = "<div style='color: red; font-weight: bold; text-align: center;'>Invalid Email!</div>";
+					return $signupMsg;
+				} else {
+					$query = "INSERT INTO tbl_review (name, email, referrer, comment) VALUES ('$name', '$email', '$referrer', '$comment')";
+
+			  		$inserted_row = $this->db->insert($query);
+
+			  		// if data is inserted
+					if ($inserted_row){
+						$msg = "<div style='color: green; font-weight: bold; text-align: center;'>Review Submitted Successful!</div>";
+						return $msg;
+					}
+					else {
+						$msg = "<div style='color: green; font-weight: bold; text-align: center;'>Review not submitted!</div>";
+						return $msg;
+					}
+				}
+            }
 		}
 	}
 ?>

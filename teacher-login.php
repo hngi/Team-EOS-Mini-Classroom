@@ -25,7 +25,7 @@
                   <input class="Password" name="password" value="" placeholder="Password">
               </div>
               <!-- Remember Password -->
-              <input type="checkbox" class="checkbox" required>  <span style="">Remember Password</span>
+              <input type="checkbox" class="checkbox">  <span style="">Remember Password</span>
               <button type="submit" name="submit" class="button" style="color: #fff;">Sign In</button>
           </form>
     

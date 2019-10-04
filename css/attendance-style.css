@@ -44,14 +44,16 @@ p.registered-dates{
 tr{
 	color: #113F67;
 }
-#datepicker{
+/*#datepicker{
 	color: #fff;
 	background: #113F67;
 	text-align: center;
 	border: none;
-}
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+}*/
+
+@media screen and (max-width: 400px) {
 	span.text{
-	font-size: 2px;
+		/*font-size: 2px;*/
+		margin: 20px;
 	}
+}
