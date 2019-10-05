@@ -20,26 +20,11 @@
         <div class="toggle">
                 <input type="checkbox" id="toggle" />
                 <label for="toggle"></label>
-                <em>Enable dark mode!</em>
             </div>
-              <script>
-                const toggle = document.getElementById('toggle');
-                const body = document.body;
-        
-                toggle.addEventListener('input', e => {
-                const isChecked = e.target.checked;
-        
-                if (isChecked) {
-                body.classList.add('dark-theme');
-                     } else {
-                 body.classList.remove('dark-theme');
-                 }
-                  });
-              </script>
     <header>
         <div class="nav-logo">
             <a href="index.html"><img src="Mini-class App designs/mathisi logo new.svg" class="logo" alt="Logo"></a>
-            <a href="support.html" class="support-btn">Support</a>
+            <a href="faq.html" class="support-btn">Support</a>
         </div>
         <div class="Navbar__Link Navbar__Link-toggle">
             <img src="Mini-class App designs/bars-solid.svg" width="25%" alt="">
@@ -107,7 +92,7 @@
     <div class="container-fluid">
         <div class="footer">
             <div class="footer-image">
-                <a href="homePage.html"><img src="Mini-class App designs/mathisi logo while.svg" alt=""></a>
+                <a href="index.html"><img src="Mini-class App designs/mathisi logo while.svg" alt=""></a>
             </div>
             <div class="social-icons">
                 <a href="" class="footer-icons"><i class="fab fa-twitter" style="width: 20px; height: 17px;"></i></a>
@@ -125,6 +110,20 @@
             </div>
         </div>
     </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+
+        toggle.addEventListener('input', e => {
+            const isChecked = e.target.checked;
+
+            if (isChecked) {
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+            }
+        });
+    </script>
     <script src="js/app.js"></script>
 </body>
 

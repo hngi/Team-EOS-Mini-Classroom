@@ -1,11 +1,19 @@
-body{
-  background-color: #F3F9FB;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 img {
   border-radius: 80%;
 }
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
+    .row.content {height: 1000px}
     
     /* Set gray background color and 100% height */
     .sidenav {
