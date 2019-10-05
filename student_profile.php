@@ -50,9 +50,18 @@ $fm = new Format()
             </div>
 
             <div class="navigation">
-                <p class="announcements nav-item"><img src="./images/ic-round-notifications-none.png" alt="announcements"> Announcements</p>
-                <p class="classes nav-item"><a href="classroom.php"><img src="./images/mdi-teach.png" alt="classes"> </a> Classes</p>
-                <p class="materials nav-item"><img src="./images/foundation-book.png" alt="materials"> Materials</p>
+                <a style="text-decoration: none;
+                          color: white;" href="dashboard.html">
+                    <p class="announcements nav-item"><img src="./images/ic-round-notifications-none.png" alt="announcements"> Announcements</p>
+                </a>
+                <a style="text-decoration: none;
+                          color: white;" href="classroom.php">
+                    <p class="classes nav-item"><img src="./images/mdi-teach.png" alt="classes"> Classes</p>
+                </a>
+                <a style="text-decoration: none;
+                          color: white;" href="student-class.php">
+                    <p class="materials nav-item"><img src="./images/foundation-book.png" alt="materials"> Materials</p>
+                </a>
             </div>
         </div>
 
@@ -71,7 +80,7 @@ $fm = new Format()
                         <span class="firstname plate"><?php echo Session::get('studentName'); ?></span>
                         <span class="lastname plate"></span>
                     </p>
-                    <p class="email plate">Email: <?php echo Session::get('studentEmail'); ?></p>
+                    <p class="email plate">Email: <?php echo Session::get('studentEmail'); ?> </p>
                     <p class="phone plate">Phone: 0123456789</p>
                 </div>
 
