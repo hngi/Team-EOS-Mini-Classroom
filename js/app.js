@@ -1,4 +1,3 @@
-alert('collented ')
 
 function classToggle() {
     const navs = document.querySelectorAll('.nav__links')
