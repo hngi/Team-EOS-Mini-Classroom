@@ -348,3 +348,8 @@ button:hover {
 .open {
   height: 220px;
 }
+
+.dark-theme {
+  background-color: #333;
+  color: #F3F9FB;
+}
