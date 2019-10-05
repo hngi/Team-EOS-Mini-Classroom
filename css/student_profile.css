@@ -6,7 +6,7 @@ body{
     font-family: Lato;
 }
 
-input:hover, .nav-item:hover {
+button:hover, .nav-item:hover {
     background: #f3f9fb;
     color: #113f67;
 }
@@ -120,7 +120,7 @@ input:hover, .nav-item:hover {
         padding: 10px;
     }
 
-    input{
+    button{
         border-radius: 15px;
         padding: 10px;
         background: #113f67;
@@ -232,7 +232,7 @@ input:hover, .nav-item:hover {
         padding: 10px;
     }
 
-    input{
+    button{
         border-radius: 15px;
         padding: 10px;
         background: #113f67;

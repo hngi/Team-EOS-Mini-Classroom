@@ -19,7 +19,7 @@ $fm = new Format()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./student_profile.css">
+    <link rel="stylesheet" href="./css/student_profile.css">
     <title>Mathisi</title>
 </head>
 
