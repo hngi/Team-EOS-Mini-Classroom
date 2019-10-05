@@ -1,131 +1,75 @@
-<?php    
-  include 'lib/Session.php';
-  Session::checkTeacherSession();
+<?php include 'teachers-dashboard-header.php'; ?>
+<div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+        <em>Enable dark mode!</em>
+    </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+const body = document.body;
 
-  spl_autoload_register(function($class){
-    include_once "classes/".$class.".php";
-  });
+toggle.addEventListener('input', e => {
+const isChecked = e.target.checked;
 
-  $class = new ClassApp();
-?>
+if (isChecked) {
+    body.classList.add('dark-theme');
+} else {
+    body.classList.remove('dark-theme');
+}
+});
+      </script>
 
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="Mini-class App designs/mathisi logo.png" type="image/png">
-    <link rel="stylesheet" href="css/addItems.css">
-    <title>Add items</title>
-    <style type="text/css">
-      .success {
-        background: #274970;
-        color: white;
-        padding: 10px;
-        z-index: 30;
-        width: 100%;
-        margin: 40px auto;
-      }
-      .error {
-        background: #C63305;
-        color: white;
-        padding: 10px;
-        z-index: 30;
-        width: 100%;
-        margin: 40px auto;
-      }
-      .add {
-        color: #fff; 
-        padding: 20px;
-        display: block;
-        text-decoration: none;
-        font-size: 20px;
-      }
-      .greeting {
-        color: #C63305;
-      }
-      .select-item {
-        display: inline-block;
-        text-decoration: none;
-        background-color: #C63305;
-        color: #000;
-        padding: 12px 15px;
-        border-radius: 30px;
-        color: #fff;
-      }
-    </style>
-</head>
-<body>
-    <?php
-        if (isset($_GET['action']) && $_GET['action'] == 'logout') {
-            Session::destroy();
-        }
+<h4>Add Materials To Class</h4>
+      
+      <br><br>
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
-            $addItem = $class->addNewItem($_POST, $_FILES);
-        }
-    ?>  
-    <header>
-        <a href="index.html"><img src="Mini-class App designs/Logo.svg" class="logo" alt="Logo" width="15%"></a>
-            <a href="?action=logout" class="sign-out-btn">Sign Out</a>
-    </header>
-    <main>
-        <div class="container">
-            <div class='row'>
-                <div class='column'>
-                    <div class='column-left'>
-                        <!-- greeting -->
-                        <h4 class="greeting">
-                            Hello teacher <?php echo Session::get('teacherName'); ?>!
-                        </h4>
-                        <!-- End of greeting -->
+    <div class="col-lg-12" style="padding-top: 10px" class="panel panel-primary">
+        <div class="row">
+            <div class="col-md-6">
+                <?php
+                  if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+                        $addItem = $class->addNewItem($_POST, $_FILES);
+                    }
+                ?>
+                <!-- success/error message -->
+                <?php 
+                    if (isset($addItem)) {
+                        echo $addItem;
+                    }
+                ?>
+         
+                <form action="" method="post" enctype="multipart/form-data" role="form">
+                    <!-- Select class drop down menu -->
+                    <div class="form-group">
+                        <select class="form-control" name="classId" required>  
 
-                        <h2>Add Items</h2>
-                        <!-- success/error message -->
-                        <?php 
-                            if (isset($addItem)) {
-                                echo $addItem;
-                            }
+                            <option>Select Class</option>
+                            <!-- get all classes -->
+                        <?php
+                            $getAllClasses = $class->selectAllClasses();
+                            if ($getAllClasses) {
+                                while ($result = $getAllClasses->fetch_assoc()) {
                         ?>
-
-                        <form action="" method="post" enctype="multipart/form-data">
-                            <!-- Select class drop down menu -->
-                            <select class="choose-item" name="classId" required>  
-
-                                <option>Select Class</option>
-                                <!-- get all classes -->
-                            <?php
-                                $getAllClasses = $class->selectAllClasses();
-                                if ($getAllClasses) {
-                                    while ($result = $getAllClasses->fetch_assoc()) {
-                            ?>
-                                <option value="<?php echo $result['id']; ?>"><?php echo $result['class_name']; ?></option>
-                            <?php } } ?>
-                            </select>
-                            <br>
-
-                            <!-- select file to add to class -->
-                            <div style="margin-top: 15px;">
-                                <input type="file" name="classFile" class="select-item" accept=".pdf, .doc, .ppt, .txt" required>
-                            </div>
-
-                            <div class="btn">
-                                <button name="submit" class="add-btn">Add Item</button>
-                            </div>
-                        </form>
-                        <!-- Back button -->
-                        <!-- <a href="create-class.php" class="add-btn"><< Back</a> -->
+                            <option value="<?php echo $result['id']; ?>"><?php echo $result['class_name']; ?></option>
+                        <?php } } ?>
+                        </select>
                     </div>
-                </div>
-                <div class="line"></div>
-                <div class='column'>
-                    <div class='column-right'>
-                        <table id="items" class="main-section">
-                            <tr>
-                                <th>Class</th>
-                                <th>Item(s)</th>
-                            </tr>
+                    <br>
+
+                    <!-- select file to add to class -->
+                    <div class="form-group">
+                        <input type="file" name="classFile" class="form-control" accept=".pdf, .doc, .ppt, .txt" required>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-success">Add Item</button>
+                </form>
+            </div>
+            <div class="col-md-6 margin-top">
+                <h3>Number of materials in each class</h3>
+                <table id="items" class="table table-striped table-bordered">
+                    <tr>
+                        <th>Class</th>
+                        <th>Item(s)</th>
+                    </tr>
                     <?php
                         $getAllClasses2 = $class->selectAllClasses();
                         if ($getAllClasses2) {
@@ -144,16 +88,13 @@
                                     <td class="mr"><?php echo $count['items_count']; ?></td>
                                 </tr>
                     <?php } } ?>
-
-                            <tr class="last">
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                </table>
             </div>
-        </div>
-    </main>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </html>

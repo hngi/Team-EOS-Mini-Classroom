@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> </title>
+<link rel="stylesheet" href="sign up.css">
+<script defer src="validate.js"></script>
+
+</head>
+<body>
+    <div class="container">
+            <div class="toggle">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle"></label>
+                    <em>Enable dark mode!</em>
+                </div>
+                  <script>
+                    const toggle = document.getElementById('toggle');
+                    const body = document.body;
+            
+                    toggle.addEventListener('input', e => {
+                    const isChecked = e.target.checked;
+            
+                    if (isChecked) {
+                    body.classList.add('dark-theme');
+                         } else {
+                     body.classList.remove('dark-theme');
+                     }
+                      });
+                  </script>
+        
+        <div class="orangeBox"></div>
+        <div class="formContainer">
+                <img src="mathisi logo.png" alt="mathisi logo">
+                <h1> Sign up as a student </h1>
+            
+                <form action="student_login.html" method="POST" id= "signupForm">
+                   
+    
+                      <label for="name"></label>
+                      <input type="text" id="name" placeholder="Full name" name= "name" required>
+                      <p id="matchName" class="error"></p>
+                      
+    
+                      <label for="email"></label>
+                      <input type="text" id="email" placeholder="Email Adress" required>
+                      <p id="matchEmail" class="error"></p>
+                  
+                      <label for="psw"></label>
+                      <input type="password" id="psw" placeholder="Password" name="password" required>
+                      <p id="matchPassword" class="error"></p>
+    
+                      <label for="psw2"></label>
+                      <input type="password" id="psw2" placeholder="Confirm Password" name="password2" required>
+                      <p id="confirmPassword" class="error"></p>
+                      <br>
+    
+                      <button type="submit" class="signupbtn" onclick="validateFunction()">Sign up</button>
+                
+                  </form>
+              
+              
+              <p> Have an account already? <a href="student login.html">log in</a></p>
+
+        </div>
+        
+    </div>
+
+</body>

@@ -22,7 +22,7 @@
 			$checkClass = "SELECT * FROM tbl_class WHERE class_name = '$cleanClass' LIMIT 1";
 			$reply = $this->db->select($checkClass);
 			if ($reply != false) {
-				$msg = "<div class='error'>Class had been created earlier, please try another class!</div>";
+				$msg = "<div class='alert alert-danger'>Class had been created earlier, please try another class!</div>";
 				return $msg;
 			}
 
@@ -32,13 +32,13 @@
 
 	  		// if data is inserted
 			if ($inserted_row){
-				$msg = "<div class='success'>Class has been added successfully. You should Add Items to the new class you just created!<br>
-					<a href='add-items.php' class='add'>Add Items >></a>
+				$msg = "<div class='alert alert-success'>Class has been added successfully. You should Add Items to the new class you just created!<br>
+					<a href='add-items.php' class='btn btn-danger'>Add Items</a>
 				</div>";
 				return $msg;
 			}
 			else {
-				$msg = "<div class='error'>Registration Not Successful!</div>";
+				$msg = "<div class='alert alert-danger'>Registration Not Successful!</div>";
 				return $msg;
 			}
 		}
@@ -77,24 +77,24 @@
 		  	$uploaded_file = "class-files/".$file_name;
 
 		  	if ($classId == "") {
-		  		$msg = "<span class='error'>Please select the Class you want to add the item to!</span>";
+		  		$msg = "<span class='alert alert-danger'>Please select the Class you want to add the item to!</span>";
 		  		return $msg;
 			
 			} elseif ($file_size > 3048567) {
-		  		echo "<span class='error'>File Size should be less than 3MB</span>";
+		  		echo "<span class='alert alert-danger'>File Size should be less than 3MB</span>";
 		  	
 		  	} elseif (in_array($file_ext, $permited) === false) {
-		  		echo "<span class='error'>You can upload only:-".implode(', ',$permited)."</span>";
+		  		echo "<span class='alert alert-danger'>You can upload only:-".implode(', ',$permited)."</span>";
 		  	
 		  	} else {
 		  		move_uploaded_file($file_temp, $uploaded_file);
 		      	$query = "INSERT INTO tbl_class_items (classId, item) VALUES ('$classId', '$file_name')";
 		      	$result = $this->db->insert($query);
 		  		if ($result) {
-		  			$msg = "<span class='success'>New File Added Successfully.</span><br><br>";
+		  			$msg = "<span class='alert alert-success'>New File Added Successfully.</span><br><br>";
 		  			return $msg;
 		  		} else {
-		  			$msg = "<span class='error'>File Not Added, Please Try Again!</span><br><br>";
+		  			$msg = "<span class='alert alert-danger'>File Not Added, Please Try Again!</span><br><br>";
 		  			return $msg;
 		  		}
 		  	}

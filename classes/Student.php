@@ -28,12 +28,12 @@
 
 			// if any field is empty
 			if(empty($cleanName) || empty($cleanEmail) || empty($cleanPassword)) {
-				$signupMsg = "<div class='alert-danger' role='alert'>Please fill all fields!</div>";
+				$signupMsg = "<div class='alert alert-danger' role='alert'>Please fill all fields!</div>";
 				return $signupMsg;
 			} 
 
 			if (!filter_var($cleanEmail, FILTER_VALIDATE_EMAIL)) {
-				$signupMsg = "<div class='alert-danger' role='alert'>Invalid Email!</div>";
+				$signupMsg = "<div class='alert alert-danger' role='alert'>Invalid Email!</div>";
 				return $signupMsg;
 			}
 			
@@ -41,7 +41,7 @@
 			$checkEmail = "SELECT * FROM tbl_student WHERE email = '$cleanEmail' LIMIT 1";
 			$mailChk = $this->db->select($checkEmail);
 			if ($mailChk != false) {
-				$msg = "<div class='alert-danger' role='alert'>Email Already Exist.</div>";
+				$msg = "<div class='alert alert-danger' role='alert'>Email Already Exist.</div>";
 				return $msg;
 			}
 			else {
@@ -52,11 +52,11 @@
 
 		  		// if data is inserted
 				if ($inserted_row){
-					$msg = "<div class='alert-success' role='alert'>Registration Successful! Please click the Log In below to sign in!</div>";
+					$msg = "<div class='alert alert-success' role='alert'>Registration Successful! Please click the Log In below to sign in!</div>";
 					return $msg;
 				}
 				else {
-					$msg = "<div class='alert-danger' role='alert'>Registration Not Successful!</div>";
+					$msg = "<div class='alert alert-danger' role='alert'>Registration Not Successful!</div>";
 					return $msg;
 				}
 			}
@@ -71,12 +71,12 @@
 
 			// If details are empty
 			if(empty($cleanEmail) || empty($cleanPassword)) {
-				$loginmsg = "<div class='alert-danger' role='alert'>Email or Password must not be empty</div>";
+				$loginmsg = "<div class='alert alert-danger' role='alert'>Email or Password must not be empty</div>";
 				return $loginmsg;
 			}
 			// if email is wrong
 			elseif (!filter_var($cleanEmail, FILTER_VALIDATE_EMAIL)){
-				$signupMsg = "<div class='alert-danger' role='alert'>Invalid Email!</div>";
+				$signupMsg = "<div class='alert alert-danger' role='alert'>Invalid Email!</div>";
 				return $signupMsg;
 			}
 			else {
@@ -93,7 +93,7 @@
 					header("Location: classroom.php");
 				}
 				else {
-					$loginmsg = "<div class='alert-danger' role='alert'>Email or Password Incorrect!</div>";
+					$loginmsg = "<div class='alert alert-danger' role='alert'>Email or Password Incorrect!</div>";
 					return $loginmsg;
 				}
 			}
@@ -116,7 +116,7 @@
 
 			// check for wrong email format
 			if (!filter_var($cleanEmail, FILTER_VALIDATE_EMAIL)){
-				$signupMsg = "<div class='alert-danger' role='alert'>Invalid Email!</div>";
+				$signupMsg = "<div class='alert alert-danger' role='alert'>Invalid Email!</div>";
 				return $signupMsg;
 			} else {
 				// check if mail exists
@@ -128,11 +128,11 @@
 					$updatePassword = "UPDATE tbl_student SET password = '$cleanPassword' WHERE email = '$cleanEmail'";
 					$update = $this->db->update($updatePassword);
 					if ($update) {
-						$msg = "<div class='alert-success' role='alert'>Password changed successfully! You may sign in into your account with your new password.</div>";
+						$msg = "<div class='alert alert-success' role='alert'>Password changed successfully! You may sign in into your account with your new password.</div>";
 						return $msg;
 					}
 				} else {
-					$msg = "<div class='alert-danger' role='alert'>Email Does Not Exist.</div>";
+					$msg = "<div class='alert alert-danger' role='alert'>Email Does Not Exist.</div>";
 					return $msg;
 				}
 			}
@@ -149,10 +149,10 @@
 			$updateBan = $this->db->update($banStudent);
 			// if query is successful
 			if ($updateBan) {
-				$msg = "<div class='alert alert-danger' role='alert'>This student has been banned successfully!.</div>";
+				$msg = "<div class='alert alert alert-danger' role='alert'>This student has been banned successfully!.</div>";
 				return $msg;
 			} else {
-				$msg = "<div class='alert-danger' role='alert'>Student not banned yet, please try again!</div>";
+				$msg = "<div class='alert alert-danger' role='alert'>Student not banned yet, please try again!</div>";
 				return $msg;
 			}
 		}
@@ -171,7 +171,7 @@
 				$msg = "<div class='alert alert-success' role='alert'>This student has been pardoned successfully!.</div>";
 				return $msg;
 			} else {
-				$msg = "<div class='alert-danger' role='alert'>Student not pardoned yet, please try again.</div>";
+				$msg = "<div class='alert alert-danger' role='alert'>Student not pardoned yet, please try again.</div>";
 				return $msg;
 			}
 		}
@@ -190,7 +190,7 @@
 				return $msg;
 			}
 			else {
-				$msg = "<div class='alert-danger' role='alert'>Student not expelled yet, please try again.</div>";
+				$msg = "<div class='alert alert-danger' role='alert'>Student not expelled yet, please try again.</div>";
 				return $msg;
 			}
 		}
@@ -226,6 +226,41 @@
 					}
 				}
             }
+		}
+
+		// Add Announcement
+		public function addAnnouncement($data) {
+			$title = $this->fm->validation($data['title']);
+			$content = $this->fm->validation($data['content']);
+			$teacher_id = $this->fm->validation($data['teacher_id']);
+
+			if (empty($title) || empty($content)) {
+                $msg = "<div class='alert alert-danger' role='alert'>Please fill all fields</div>";
+                return $msg;
+            } else {
+            	$query = "INSERT INTO tbl_announcement (title, content, teacher_id) VALUES ('$title', '$content', '$teacher_id')";
+
+		  		$inserted_row = $this->db->insert($query);
+
+		  		// if data is inserted
+				if ($inserted_row){
+					$msg = "<div class='alert alert-success' role='alert'>Announcement Posted Successful!</div>";
+					return $msg;
+				}
+				else {
+					$msg = "<div class='alert alert-danger' role='alert'>Announcement not posted!</div>";
+					return $msg;
+				}
+            }
+        }
+
+        // get all announcements
+        public function selectAllAnnouncements() {
+			$query = "SELECT tbl_announcement.*, tbl_teacher.name FROM tbl_announcement INNER JOIN tbl_teacher ON tbl_announcement.teacher_id = tbl_teacher.id ORDER BY tbl_announcement.announcement_id DESC";
+			// $getData = $this->db->select($query);
+			// return $getData;
+			$getData = $this->db->select($query);
+			return $getData;
 		}
 	}
 ?>

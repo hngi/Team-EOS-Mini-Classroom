@@ -1,82 +1,75 @@
-<?php    
-  include 'lib/Session.php';
-  //Session::checkTeacherSession();
-  spl_autoload_register(function($class){
-    include_once "classes/".$class.".php";
-  });
- 
-  $student = new Student();
-?>
+<?php include 'teachers-dashboard-header.php'; ?>
+<div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+        <em>Enable dark mode!</em>
+    </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+const body = document.body;
 
+toggle.addEventListener('input', e => {
+const isChecked = e.target.checked;
 
-<!DOCTYPE html>
-<html lang="en">
-<html>
-<head>
-	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/attendance-style.css">
-	<title>Mathisi-student-attendance-Page</title>
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-xs-12 col-sm-12">
-				<div class="attendance-topic">
-					<img src="images/Logo.svg" class="logo" alt="mathisi">
-					<span class="text">Students Attendance</span>
-				</div>
-			</div>
+if (isChecked) {
+    body.classList.add('dark-theme');
+} else {
+    body.classList.remove('dark-theme');
+}
+});
+      </script>
+
+<h4>All Registered Students</h4>
+      
+      <br><br>
+<div class="col-lg-12" style="padding-top: 10px" class="panel panel-primary">
+	<div class="row">
+        <div class="col-md-6">
+			<table id="studentTable" class="table table-striped table-bordered" style="width: 100%">
+
+		    <!--Table head-->
+			    <thead>
+			      <tr>
+			        <th>S/N</th>
+			        <th>Name</th>
+			        <th>Email</th>
+			        <th>Attendance</th>
+			      </tr>
+			    </thead>
+				<tbody>
+					<!-- Show all students -->
+		              <?php
+		                $getAllStudents = $student->selectAllStudents();
+		                  if ($getAllStudents) {
+		                    $i = 0;
+		                      while ($result = $getAllStudents->fetch_assoc()) {
+		                        $i++;
+		              ?>
+		            <tr>              
+		              <td><?php echo $i; ?></td>
+		              <td><?php echo $result['name']; ?></td>
+		              <td><?php echo $result['email']; ?></td>
+		              <td><button class="btn btn-danger">Present</button></td>
+		            </tr>
+		          <?php } } ?>
+				</tbody>
+			</table>
 		</div>
-
-		<div class="row">
-			<div class="col-md-9">
-				<div class="students">
-					<p class="registered">All registered Students</p>
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Student Names</th>
-								<th scope="col"> Email</th>
-							</tr>
-						</thead>
-						<tbody>
-							<!-- Show all students -->
-				              <?php
-				                $getAllStudents = $student->selectAllStudents();
-				                  if ($getAllStudents) {
-				                    $i = 0;
-				                      while ($result = $getAllStudents->fetch_assoc()) {
-				                        $i++;
-				              ?>
-				            <tr>              
-				              <td><?php echo $i; ?></td>
-				              <td><?php echo $result['name']; ?></td>
-				              <td><?php echo $result['email']; ?></td>
-				            </tr>
-				          <?php } } ?>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="dates">
-					<p class="registered-dates">Check by date</p>
-					<div class="form-group">
-						<input type="date" id="datepicker" class="form-control">
-					</div>
+		<div class="col-md-6 margin-top">
+			<div class="dates">
+				<h3>Check by date</h3>
+				<div class="form-group">
+					<input type="date" id="datepicker" class="form-control">
 				</div>
 			</div>	
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(function() {
-			$( "#date").datepicker();
-		});
-	</script>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( "#date").datepicker();
+	});
+</script>
 </body>
 </html>

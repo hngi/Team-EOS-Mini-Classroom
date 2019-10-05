@@ -31,7 +31,7 @@
 		public static function checkTeacherLogin(){
 			self::init();
 			if(self::get("teacherLogin") == true) {
-				header("Location:create-class.php");
+				header("Location:teachers-dashboard.php");
 			}
 		}
 
