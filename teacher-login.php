@@ -10,7 +10,6 @@
         <div class="toggle">
         <input type="checkbox" id="toggle" />
         <label for="toggle"></label>
-        <em>Enable dark mode!</em>
     </div>
       <script>
         const toggle = document.getElementById('toggle');
