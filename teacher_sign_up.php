@@ -17,16 +17,21 @@
                     echo $teacherSignup;
                   }
               ?>
-              <form action="" method="post">
+              <form action="" method="post" id = "signupForm">
+                <div id = "error"></div>
 
                   <label for="name"></label>
-                  <input class="form-control type="text" placeholder="Full Name" name="name" required>
+                  <input type="text" placeholder="Full Name" name="name" required><br>
               
                   <label for="email"></label>
-                  <input type="email" placeholder="Email Address" name="email" required>
+                  <input type="email" id="email" placeholder="Email Address" name="email" required><br>
               
                   <label for="psw"></label>
-                  <input type="password" placeholder="Password" name="password" required><br>
+                  <input type="password" id="psw" placeholder="Password" name="password" required><br>
+
+                  <label for="psw2"></label>
+                  <input type="password" id="psw2" placeholder="Password" name="password2" required> <br>
+
                   <button type="submit" name="submit" class="signupbtn">Sign Up</button>
               </form>
               

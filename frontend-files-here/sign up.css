@@ -60,3 +60,6 @@ input {
       padding: 20px;
   }
  
+  .wrongInput {
+      color: red;
+  }

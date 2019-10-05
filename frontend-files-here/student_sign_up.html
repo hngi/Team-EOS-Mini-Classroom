@@ -15,26 +15,26 @@
                 <h1> Sign up as a student </h1>
             
                 <form action="student_login.html" method="POST" id= "signupForm">
-                    <div id = "error"></div>
                    
     
                       <label for="name"></label>
-                      <input type="text" id="name" placeholder="Fullname" required>
-                      <br>
+                      <input type="text" id="name" placeholder="Full name" name= "name" required>
+                      <p id="matchName" class="error"></p>
+                      
     
                       <label for="email"></label>
-                      <input type="text" id="email" placeholder="Email Adress" required>  <br>
-                      <br>
+                      <input type="text" id="email" placeholder="Email Adress" required>
+                      <p id="matchEmail" class="error"></p>
                   
-                      <label for="psw1"></label>
-                      <input type="password" id="psw1" placeholder="Password" required> <br>
-                      <br>
+                      <label for="psw"></label>
+                      <input type="password" id="psw" placeholder="Password" name="password" required>
+                      <p id="matchPassword" class="error"></p>
     
                       <label for="psw2"></label>
-                      <input type="password" id="psw2" placeholder="Password" required> <br>
-                      <br>
+                      <input type="password" id="psw2" placeholder="Password" name="password2" required>
+                      <p id="confirmPassword" class="error"></p>
     
-                      <button type="submit" class="signupbtn">Sign up</button>
+                      <button type="submit" class="signupbtn" onclick="validateFunction()">Sign up</button>
                 
                   </form>
               
