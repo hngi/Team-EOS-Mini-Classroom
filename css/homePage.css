@@ -15,6 +15,11 @@ li, a {
   color: #274970;
   text-decoration: none;
 }
+.toggle {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+}
 .toggle input[type='checkbox'] {
   display: none;
 }
@@ -28,7 +33,7 @@ li, a {
   position: relative;
   transition: all ease-in-out 0.3s;
   width: 50px;
-  height: 25px;
+  height: 26px;
 }
 .toggle label::after {
   background-color: #555;
@@ -41,7 +46,7 @@ li, a {
   top: 2px;
   transition: all ease-in-out 0.3s;
   width: 22px;
-  height: 22px;
+  height: 19px;
 }
 .toggle input[type='checkbox']:checked ~ label {
   background-color: #00a0fc;
@@ -50,7 +55,7 @@ li, a {
 
 .toggle input[type='checkbox']:checked ~ label::after {
   background-color: #0054b0;
-  transform: translateX(40px);
+  transform: translateX(30px);
 }
 .toggle input[type='checkbox']:checked ~ label {
   background-color: #00a0fc;
@@ -59,7 +64,7 @@ li, a {
 
 .toggle input[type='checkbox']:checked ~ label::after {
   background-color: #0054b0;
-  transform: translateX(40px);
+  transform: translateX(22px);
 }
 body.dark-theme {
   background-color: #333;
@@ -346,7 +351,7 @@ button:hover {
 
 
 .open {
-  height: 220px;
+  height: 250px;
 }
 
 .dark-theme {

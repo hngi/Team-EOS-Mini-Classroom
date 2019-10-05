@@ -81,24 +81,9 @@
 </head>
 <body>
         <div class="toggle">
-                <input type="checkbox" id="toggle" />
-                <label for="toggle"></label>
-                <em>Enable dark mode!</em>
-            </div>
-            <script>
-                const toggle = document.getElementById('toggle');
-        const body = document.body;
-        
-        toggle.addEventListener('input', e => {
-        const isChecked = e.target.checked;
-        
-        if (isChecked) {
-            body.classList.add('dark-theme');
-        } else {
-            body.classList.remove('dark-theme');
-        }
-        });
-              </script>
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"></label>
+        </div>
         
   <header  class="desk-nav">
         <a href="index.html"><img src="Mini-class App designs/Logo.svg" class="logo" alt="Logo" style="width: 100px; height: 100px;">
@@ -192,6 +177,20 @@
             </div>
         </div>
 
-    <script src="js/main.js"></script>       
+    <script src="js/main.js"></script> 
+   <script>
+    const toggle = document.getElementById('toggle');
+    const body = document.body;
+
+    toggle.addEventListener('input', e => {
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+            body.classList.add('dark-theme');
+        } else {
+            body.classList.remove('dark-theme');
+        }
+    });
+</script>   
 </body>
 </html>
