@@ -18,30 +18,40 @@ function validateFunction () {
     if (name.value === "" || name.value == null) {
         matchName.className = "wrongInput" 
         matchName.innerHTML = "Username can't be blank"
-        signupbutton.disabled = true;
-        
-        
+                   
+    }
+    else {
+        document.getElementById("matchName").style.display = "none";
     }
     
 
     if (emailFormat.test(email.value) == false) {
         matchEmail.className = "wrongInput";
         matchEmail.innerHTML = "Incorrect email format";
+    }
 
+    else {
+        document.getElementById("matchEmail").style.display = "none";
     }
 
     if (passwordFormat.test(psw.value) == false) {
         matchPassword.className = "wrongInput";
         matchPassword.innerHTML = "password should be between 7 to 14  characters, and first character must be a letter ";
-
     }
 
-    if (psw.value != psw2.value) {
+    else {
+        document.getElementById("matchPassword").style.display = "none";
+    }
+
+    if (psw2.value != psw.value) {
         
         confirmPassword.className = "wrongInput" 
         confirmPassword.innerHTML = "password does not match"
-        signupbutton.disabled = true;
+        signupbutton.setAttribute('style', 'disabled');
+       
+    }
+    else {
+        document.getElementById("confirmPassword").style.display = "none";
     }
     
-
 }
