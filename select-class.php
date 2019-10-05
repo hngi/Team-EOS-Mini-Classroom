@@ -94,7 +94,7 @@
             <?php
                 if (isset($enroll)) {
                     echo $enroll;
-                }
+                } 
             ?>
             <form class="cc-form" action="" method="post">
                 <!---<label>Create class</label><br>-->
