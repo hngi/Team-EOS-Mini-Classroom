@@ -217,8 +217,8 @@
                  <a href="index.html">
                      <img src="Mini-class App designs/Logo.svg" class="logo" alt="Logo" style="width: 100px; height: 100px;">
                  </a>
+                 <a href="student_profile.php" class="sign-out-btn">Your Dashbord</a>
                  <a href="?action=logout" class="sign-out-btn">Sign Out</a>
-                 <!-- <a href="student_profile.php" class="sign-out-btn">Your Dashbord</a> -->
              </header>
 
              <div class="content">
