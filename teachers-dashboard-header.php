@@ -43,7 +43,7 @@
         <li><a href="create-class.php" class="cl"> <img class="side" src="./images/mdi-teach.png"> Classes</a></li>
         <li><a href="add-items.php" class="cl"> <img class="side" src="./images/foundation-book.png"> Materials</a></li>
       </ul><br>
-      </div>
+      </div> 
 
     <div class="col-lg-9" style="padding-top: 50px">
        <img src="./images/logo.png" alt="Mathisi Logo" class="logo">
