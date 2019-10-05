@@ -15,43 +15,48 @@ function validateFunction () {
     var passwordFormat=  /^[A-Za-z]\w{7,14}$/; //password must be between 7 to 14  characters, and first character must be a letter  
     var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;   
 
-    if (name.value === "" || name.value == null) {
+    if (name.value === "" || name.value === null) {
         matchName.className = "wrongInput" 
         matchName.innerHTML = "Username can't be blank"
-                   
+        return false;
     }
     else {
         document.getElementById("matchName").style.display = "none";
+
     }
     
 
-    if (emailFormat.test(email.value) == false) {
+    if (emailFormat.test(email.value) === false) {
         matchEmail.className = "wrongInput";
         matchEmail.innerHTML = "Incorrect email format";
+        return false;
     }
 
     else {
         document.getElementById("matchEmail").style.display = "none";
     }
 
-    if (passwordFormat.test(psw.value) == false) {
+    if (passwordFormat.test(psw.value) === false) {
         matchPassword.className = "wrongInput";
         matchPassword.innerHTML = "password should be between 7 to 14  characters, and first character must be a letter ";
+        return false;
     }
 
     else {
         document.getElementById("matchPassword").style.display = "none";
     }
 
-    if (psw2.value != psw.value) {
+    if (psw2.value !== psw.value) {
         
         confirmPassword.className = "wrongInput" 
         confirmPassword.innerHTML = "password does not match"
-        signupbutton.setAttribute('style', 'disabled');
-       
+        // signupbutton.setAttribute('style', 'disabled');
+        
+        return false;
     }
     else {
         document.getElementById("confirmPassword").style.display = "none";
     }
     
+    return this;
 }
