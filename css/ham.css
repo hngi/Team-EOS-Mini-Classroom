@@ -65,8 +65,8 @@ html{
     transform: translateX(40px);
   }
   body.dark-theme {
-    background-color: #333;
-    color: #F3F9FB;
+    background-color: #333 !important;
+    color: #F3F9FB !important;
   }
 
 .mobile-nav__items {
