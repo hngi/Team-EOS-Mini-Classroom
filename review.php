@@ -17,6 +17,25 @@
     <link rel="stylesheet" href="css/review.css">
 </head>
 <body>
+<div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+        <em>Enable dark mode!</em>
+    </div>
+<script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+
+        toggle.addEventListener('input', e => {
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+        body.classList.add('dark-theme');
+             } else {
+         body.classList.remove('dark-theme');
+         }
+          });
+      </script>
     <div class="container">
         <div class="logo">
             <p id="mathisi">
