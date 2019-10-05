@@ -43,7 +43,7 @@ $fm = new Format()
 
                 <div class="nav-name">
                     <p class="nav-name-text">
-                        <span class="firstname">Name</span> <span class="lastname">Place</span>
+                        <!-- <span class="firstname">Name</span> <span class="lastname">Place</span> -->
                     </p>
                 </div>
 
