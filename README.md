@@ -11,6 +11,8 @@
 
 # To view the final Build
 - Visit [EosClassroom](http://eosminiclassroom.000webhostapp.com/)
+Or
+- Visit [EosClassroom](https://eosminiclassroom.herokuapp.com)
 - Enjoy
 
 # Installation Guide To run on your local evn 
